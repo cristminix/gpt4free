@@ -1,6 +1,7 @@
 # This is a fork of gpt4free
 
-- Add system message and tool calls support to BlackboxAi,LMArenaBeta
+- Add system message and tool calls support to BlackboxAi
+- Add chat history system message and tool calls support toLMArenaBeta
 
 # setup
 

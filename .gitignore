@@ -33,7 +33,6 @@ projects/windows/g4f
 generated_images/
 generated_media/
 projects/windows/
-examples/
 *.bak
 *.backup
 .env

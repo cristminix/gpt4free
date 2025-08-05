@@ -7,6 +7,10 @@ import os
 from .cookies import get_cookies_dir
 
 def secure_filename(filename: str) -> str:
+    """
+    Input: " My File!@#.txt " → Output: "My_File.txt"
+    Fungsi ini mencegah masalah keamanan (seperti path traversal) dan memastikan kompatibilitas nama file.
+    """
     if filename is None:
         return None
     # Keep letters, numbers, basic punctuation and all Unicode chars

@@ -10,6 +10,8 @@ from pathlib import Path
 from typing import Optional
 from datetime import datetime, timedelta
 
+from g4f.providers.helper import get_last_user_message_with_history
+
 from ..typing import AsyncResult, Messages, MediaListType
 from ..requests.raise_for_status import raise_for_status
 from .base_provider import AsyncGeneratorProvider, ProviderModelMixin
@@ -33,6 +35,7 @@ class Blackbox(AsyncGeneratorProvider, ProviderModelMixin):
     api_endpoint = "https://www.blackbox.ai/api/chat"
     
     working = True
+    active_by_default = True
     supports_stream = True
     supports_system_message = True
     supports_message_history = True
@@ -214,16 +217,38 @@ class Blackbox(AsyncGeneratorProvider, ProviderModelMixin):
                 conversation.chat_id = cls.generate_id()
                 conversation.message_history = []
 
-            current_messages = []
-            for i, msg in enumerate(render_messages(messages)):
-                msg_id = conversation.chat_id if i == 0 and msg["role"] == "user" else cls.generate_id()
-                current_msg = {
-                    "id": msg_id,
-                    "content": msg["content"],
-                    "role": msg["role"]
-                }
-                current_messages.append(current_msg)
-
+            # Process messages and handle system messages
+            from ..providers.helper import get_system_prompt
+            processed_messages = list(render_messages(messages))
+            system_prompt = get_system_prompt(processed_messages)
+            
+            current_messages = [{
+                 "id": conversation.chat_id ,
+                    "content": get_last_user_message_with_history(processed_messages),
+                    "role": "user"
+            }]
+            # for i, msg in enumerate(processed_messages):
+            #     # Skip system messages as they'll be prepended to the last user message
+            #     if msg["role"] in ["developer", "system"]:
+            #         continue
+                    
+            #     msg_id = conversation.chat_id if i == 0 and msg["role"] == "user" else cls.generate_id()
+                
+            #     # For the last user message, prepend system prompt if it exists
+            #     content = msg["content"]
+            #     if msg["role"] == "user" and i == len(processed_messages) - 1 and system_prompt:
+            #         content = f"System:{system_prompt}\n{content}"
+                
+            #     current_msg = {
+            #         "id": msg_id,
+            #         "content": content,
+            #         "role": msg["role"]
+            #     }
+            #     current_messages.append(current_msg)
+            # Save messages to JSON file
+            # messages_filename = f"blackbox_{cls.generate_id()}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            # with open(messages_filename, 'w') as f:
+            #     json.dump(current_messages, f, indent=2)
             media = list(merge_media(media, messages))
             if media:
                 current_messages[-1]['data'] = {

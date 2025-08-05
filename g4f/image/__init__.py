@@ -205,7 +205,7 @@ def extract_data_uri(data_uri: str) -> bytes:
     data = base64.b64decode(data)
     return data
 
-def process_image(image: Image.Image, new_width: int = 800, new_height: int = 400, save: str = None) -> Image.Image:
+def process_image(image: Image.Image, new_width: int = 400, new_height: int = 400, save: str = None) -> Image.Image:
     """
     Processes the given image by adjusting its orientation and resizing it.
 
@@ -221,14 +221,15 @@ def process_image(image: Image.Image, new_width: int = 800, new_height: int = 40
     image.thumbnail((new_width, new_height))
     # Remove transparency
     if image.mode == "RGBA":
-        image.load()
-        white = Image.open('RGB', image.size, (255, 255, 255))
-        white.paste(image, mask=image.split()[-1])
-        return white
+        # image.load()
+        # white = Image.new('RGB', image.size, (255, 255, 255))
+        # white.paste(image, mask=image.split()[-1])
+        # image = white
+        pass
     # Convert to RGB for jpg format
     elif image.mode != "RGB":
         image = image.convert("RGB")
-    elif save is not None:
+    if save is not None:
         image.save(save, exif=b"")
     return image
 
@@ -251,7 +252,7 @@ def to_bytes(image: ImageType) -> bytes:
         elif image.startswith("http://") or image.startswith("https://"):
             path: str = urlparse(image).path
             if path.startswith("/files/"):
-                path = get_bucket_dir(path.split(path, "/")[1:])
+                path = get_bucket_dir(*path.split("/")[2:])
                 if os.path.exists(path):
                     return Path(path).read_bytes()
                 else:

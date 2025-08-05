@@ -21,28 +21,32 @@ class GeminiPro(AsyncGeneratorProvider, ProviderModelMixin):
     url = "https://ai.google.dev"
     login_url = "https://aistudio.google.com/u/0/apikey"
     api_base = "https://generativelanguage.googleapis.com/v1beta"
+    active_by_default = True
 
     working = True
     supports_message_history = True
     supports_system_message = True
     needs_auth = True
 
-    default_model = "gemini-2.5-flash-preview-04-17"
+    default_model = "gemini-2.5-flash"
     default_vision_model = default_model
     fallback_models = [
         "gemini-2.0-flash",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash-thinking-exp",
-        "gemini-2.5-flash-preview-04-17",
+        "gemini-2.5-flash",
         "gemma-3-1b-it",
         "gemma-3-12b-it",
         "gemma-3-27b-it",
         "gemma-3-4b-it",
-        "gemma-3n-e4b-it"
+        "gemma-3n-e2b-it",
+        "gemma-3n-e4b-it",
     ]
 
     @classmethod
     def get_models(cls, api_key: str = None, api_base: str = api_base) -> list[str]:
+        if not api_key:
+            return cls.fallback_models
         if not cls.models:
             try:
                 url = f"{cls.api_base if not api_base else api_base}/models"

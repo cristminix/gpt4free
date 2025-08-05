@@ -9,6 +9,10 @@ from ..tools.files import get_bucket_dir, read_bucket
 from .. import debug
 
 def to_string(value) -> str:
+    """
+    Fungsi to_string adalah utilitas yang fleksibel untuk mengonversi berbagai jenis data menjadi string. 
+    Ini berguna dalam situasi di mana output yang konsisten diperlukan, terlepas dari tipe data input.
+    """
     if isinstance(value, str):
         return value
     elif isinstance(value, dict):
@@ -66,20 +70,46 @@ def format_prompt(messages: Messages, add_special_tokens: bool = False, do_conti
 def get_system_prompt(messages: Messages) -> str:
     return "\n".join([m["content"] for m in messages if m["role"] in ("developer", "system")])
 
+def get_last_user_message_with_history(messages: Messages) -> str:
+    user_messages = []
+    msg_len = len(messages)
+    msg_idx = 1
+    use_history=False
+    system_messages = []
+    for m in messages :
+        if m["role"] in ["developer", "system"]:
+            system_messages.append(m["content"])
+    if len(system_messages) > 0:
+        user_messages.append(f"System:{"\n".join(system_messages)}")
+    if msg_len > 1:
+        user_messages.append("[Chat History]")
+        use_history=True
+    for message in messages:
+        if message["role"] in ["developer", "system"]:
+            continue
+        if use_history:
+            if msg_idx < msg_len:
+                user_messages.append(f"{message["role"]}:{message["content"]}")
+            else:
+                user_messages.append(f"\n{message["content"]}")
+        else:
+            user_messages.append(f"\n{message["content"]}")
+
+        msg_idx +=1
+    return "\n".join(user_messages)
+
 def get_last_user_message(messages: Messages) -> str:
     user_messages = []
-    last_message = None if len(messages) == 0 else messages[-1]
-    messages = messages.copy()
-    while last_message is not None and messages:
-        last_message = messages.pop()
-        if last_message["role"] == "user":
-            content = to_string(last_message.get("content")).strip()
+    for message in messages[::-1]:
+        if message.get("role") == "user" or not user_messages:
+            if message.get("role") != "user":
+                continue
+            content = to_string(message.get("content")).strip()
             if content:
                 user_messages.append(content)
         else:
             return "\n".join(user_messages[::-1])
     return "\n".join(user_messages[::-1])
-
 def get_last_message(messages: Messages, prompt: str = None) -> str:
     if prompt is None:
         for message in messages[::-1]:

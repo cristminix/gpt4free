@@ -9,10 +9,19 @@ from ...typing import AsyncResult, Messages, MediaListType
 from ..base_provider import AsyncGeneratorProvider, ProviderModelMixin
 from ...providers.response import FinishReason, Usage, Reasoning, ToolCalls
 from ...tools.media import render_messages
-from ...requests import see_stream, raise_for_status
+from ...requests import sse_stream, raise_for_status
 from ...errors import ResponseError, ModelNotFoundError, MissingAuthError
 from ..helper import format_media_prompt
 from .. import debug
+import logging
+logger = logging.getLogger(__name__)
+if not logger.hasHandlers():
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
 
 class PuterJS(AsyncGeneratorProvider, ProviderModelMixin):
     label = "Puter.js"
@@ -331,11 +340,13 @@ class PuterJS(AsyncGeneratorProvider, ProviderModelMixin):
         stream: bool = True,
         api_key: str = None,
         media: MediaListType = None,
+        extra_parameters: list[str] = ["temperature", "presence_penalty", "top_p", "frequency_penalty", "response_format", "tools", "parallel_tool_calls", "tool_choice", "reasoning_effort", "logit_bias", "voice", "modalities", "audio"],
         **kwargs
     ) -> AsyncResult:
+        logger.warning(f"PUTERJS_API_KEY : {api_key}")
+        
         if not api_key:
             raise MissingAuthError("API key is required for Puter.js API")
-
         if not cls.models:
             cls.get_models()
 
@@ -388,7 +399,7 @@ class PuterJS(AsyncGeneratorProvider, ProviderModelMixin):
                     "messages": list(render_messages(messages, media)),
                     "model": model,
                     "stream": stream,
-                    **kwargs
+                    **{param: kwargs.get(param) for param in extra_parameters if param in kwargs}
                 }
             }
             async with session.post(
@@ -404,7 +415,7 @@ class PuterJS(AsyncGeneratorProvider, ProviderModelMixin):
                     return
                 elif mime_type.startswith("text/event-stream"):
                     reasoning = False
-                    async for result in see_stream(response.content):
+                    async for result in sse_stream(response.content):
                         if "error" in result:
                             raise ResponseError(result["error"].get("message", result["error"]))
                         choices = result.get("choices", [{}])

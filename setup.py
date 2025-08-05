@@ -21,9 +21,9 @@ EXTRA_REQUIRE = {
     'all': [
         "curl_cffi>=0.6.2",
         "certifi",
-        "browser_cookie3",         # get_cookies
-        "duckduckgo-search>=5.0",  # internet.search
-        "beautifulsoup4",          # internet.search and bing.create_images
+        "browser_cookie3", # get_cookies
+        "ddgs",            # web_search
+        "beautifulsoup4",  # web_search and bing.create_images
         "platformdirs",
         "aiohttp_socks",           # proxy
         "pillow",                  # image
@@ -37,14 +37,15 @@ EXTRA_REQUIRE = {
         "pywebview",
         "plyer",
         "setuptools",
-        "markitdown[all]"
+        "markitdown[all]",
+        "python-dotenv"
     ],
     'slim': [
         "curl_cffi>=0.6.2",
         "certifi",
         "browser_cookie3",
-        "duckduckgo-search>=5.0"  ,# internet.search
-        "beautifulsoup4",          # internet.search and bing.create_images
+        "ddgs",           # web_search
+        "beautifulsoup4", # web_search and bing.create_images
         "aiohttp_socks",           # proxy
         "pillow",                  # image
         "werkzeug", "flask",       # gui
@@ -52,7 +53,8 @@ EXTRA_REQUIRE = {
         "uvicorn",                 # api
         "python-multipart",
         "a2wsgi",
-        "markitdown[all]"
+        "markitdown[all]",
+        "python-dotenv"
     ],
     "image": [
         "pillow",
@@ -73,12 +75,12 @@ EXTRA_REQUIRE = {
     "gui": [
         "werkzeug", "flask",
         "beautifulsoup4", "pillow",
-        "duckduckgo-search>=5.0",
+        "ddgs",
     ],
     "search": [
         "beautifulsoup4",
         "pillow",
-        "duckduckgo-search>=5.0",
+        "ddgs",
     ],
     "local": [
         "gpt4all"

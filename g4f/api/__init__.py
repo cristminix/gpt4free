@@ -2,19 +2,20 @@ from __future__ import annotations
 
 import logging
 import json
-from click import Tuple
 import uvicorn
 import secrets
 import os
 import re
 import shutil
+import time
 from email.utils import formatdate
 import os.path
 import hashlib
 import asyncio
+import base64
 from contextlib import asynccontextmanager
 from urllib.parse import quote_plus
-from fastapi import FastAPI, Response, Request, UploadFile, Form, Depends
+from fastapi import FastAPI, Response, Request, UploadFile, Form, Depends, Header
 from fastapi.responses import StreamingResponse, RedirectResponse, HTMLResponse, JSONResponse, FileResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi.security import APIKeyHeader
@@ -33,8 +34,6 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials, HTTPBasic
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
 from starlette.background import BackgroundTask
-
-from gptfree.g4f.api.model_info import MODEL_INFO
 try:
     from a2wsgi import WSGIMiddleware
     has_a2wsgi = True
@@ -83,22 +82,17 @@ from .stubs import (
 )
 from g4f import debug
 
+try:
+    from g4f.gui.server.crypto import create_or_read_keys, decrypt_data, get_session_key
+    has_crypto = True
+except ImportError:
+    has_crypto = False
+
 logger = logging.getLogger(__name__)
-if not logger.hasHandlers():
-    handler = logging.StreamHandler()
-    handler.setLevel(logging.DEBUG)
-    formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-logger.setLevel(logging.DEBUG)
 
 DEFAULT_PORT = 1337
 DEFAULT_TIMEOUT = 600
-def get_name_and_provider(name_provider: str) -> Tuple[str, str]:
-    """Given a string in the format 'name:provider', return a tuple (name, provider)."""
-    if ':' not in name_provider:
-        raise ValueError("Input must be in the format 'name:provider'")
-    return tuple(name_provider.split(':', 1))
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Read cookie files if not ignored
@@ -122,10 +116,11 @@ def create_app():
     # Add CORS middleware
     app.add_middleware(
         CORSMiddleware,
-        allow_origin_regex=".*",
+        allow_origins=["*"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
+        expose_headers=["*"],
     )
 
     api = Api(app)
@@ -179,8 +174,8 @@ class ErrorResponse(Response):
         return str(content).encode(errors="ignore")
 
 class AppConfig:
-    ignored_providers: Optional[list[str]] = ["OpenaiChat","LegacyLMArena",'HuggingSpace', 'Together', 'HuggingChat',"PuterJS"]
-    g4f_api_key: Optional[str] = None
+    ignored_providers: Optional[list[str]] = None
+    g4f_api_key: Optional[str] = os.environ.get("G4F_API_KEY", None)
     ignore_cookie_files: bool = False
     model: str = None
     provider: str = None
@@ -189,12 +184,21 @@ class AppConfig:
     gui: bool = False
     demo: bool = False
     timeout: int = DEFAULT_TIMEOUT
-    useSplitModels: bool = False
 
     @classmethod
     def set_config(cls, **data):
         for key, value in data.items():
-            setattr(cls, key, value)
+            if value is not None:
+                setattr(cls, key, value)
+
+def update_headers(request: Request, user: str) -> Request:
+    new_headers = request.headers.mutablecopy()
+    del new_headers["Authorization"]
+    if user:
+        new_headers["x-user"] = user
+    request.scope["headers"] = new_headers.raw
+    delattr(request, "_headers")
+    return request
 
 class Api:
     def __init__(self, app: FastAPI) -> None:
@@ -223,34 +227,59 @@ class Api:
     def register_authorization(self):
         if AppConfig.g4f_api_key:
             print(f"Register authentication key: {''.join(['*' for _ in range(len(AppConfig.g4f_api_key))])}")
+        if has_crypto:
+            private_key, _ = create_or_read_keys()
+            session_key = get_session_key()
         @self.app.middleware("http")
         async def authorization(request: Request, call_next):
-            if AppConfig.g4f_api_key is not None or AppConfig.demo:
+            user = None
+            if request.method != "OPTIONS" and AppConfig.g4f_api_key is not None or AppConfig.demo:
                 try:
                     user_g4f_api_key = await self.get_g4f_api_key(request)
                 except HTTPException:
                     user_g4f_api_key = await self.security(request)
                     if hasattr(user_g4f_api_key, "credentials"):
                         user_g4f_api_key = user_g4f_api_key.credentials
+                if AppConfig.g4f_api_key is None or not secrets.compare_digest(AppConfig.g4f_api_key, user_g4f_api_key):
+                    if has_crypto and user_g4f_api_key:
+                        try:
+                            expires, user = decrypt_data(private_key, user_g4f_api_key).split(":", 1)
+                        except:
+                            try:
+                                data = json.loads(decrypt_data(session_key, user_g4f_api_key))
+                                expires = int(decrypt_data(private_key, data["data"])) + 86400
+                                user = data.get("user", user)
+                            except:
+                                return ErrorResponse.from_message(f"Invalid G4F API key", HTTP_401_UNAUTHORIZED)
+                        expires = int(expires) - int(time.time())
+                        debug.log(f"User: '{user}' G4F API key expires in {expires} seconds")
+                        if expires < 0:
+                            return ErrorResponse.from_message("G4F API key expired", HTTP_401_UNAUTHORIZED)
+                else:
+                    user = "admin"
                 path = request.url.path
                 if path.startswith("/v1") or path.startswith("/api/") or (AppConfig.demo and path == '/backend-api/v2/upload_cookies'):
-                    if user_g4f_api_key is None:
-                        return ErrorResponse.from_message("G4F API key required", HTTP_401_UNAUTHORIZED)
-                    if AppConfig.g4f_api_key is None or not secrets.compare_digest(AppConfig.g4f_api_key, user_g4f_api_key):
-                        return ErrorResponse.from_message("Invalid G4F API key", HTTP_403_FORBIDDEN)
+                    if request.method != "OPTIONS":
+                        if user_g4f_api_key is None:
+                            return ErrorResponse.from_message("G4F API key required", HTTP_401_UNAUTHORIZED)
+                        if AppConfig.g4f_api_key is None and user is None:
+                            return ErrorResponse.from_message("Invalid G4F API key", HTTP_403_FORBIDDEN)
                 elif not AppConfig.demo and not path.startswith("/images/") and not path.startswith("/media/"):
                     if user_g4f_api_key is not None:
-                        if not secrets.compare_digest(AppConfig.g4f_api_key, user_g4f_api_key):
+                        if user is None:
                             return ErrorResponse.from_message("Invalid G4F API key", HTTP_403_FORBIDDEN)
                     elif path.startswith("/backend-api/") or path.startswith("/chat/") and path != "/chat/":
                         try:
-                            username = await self.get_username(request)
+                            user = await self.get_username(request)
                         except HTTPException as e:
                             return ErrorResponse.from_message(e.detail, e.status_code, e.headers)
-                        response = await call_next(request)
-                        response.headers["x-user"] = username
-                        return response
-            return await call_next(request)
+                if user is None:
+                    ip = request.headers.get("X-Forwarded-For", "")[:4].strip(":.")
+                    user = request.headers.get("Cf-Ipcountry", "")
+                    user = f"{user}:{ip}" if user else ip
+                request = update_headers(request, user)
+            response = await call_next(request)
+            return response
 
     def register_validation_exception_handler(self):
         @self.app.exception_handler(RequestValidationError)
@@ -287,23 +316,6 @@ class Api:
             HTTP_200_OK: {"model": List[ModelResponseModel]},
         })
         async def models():
-            if AppConfig.useSplitModels:
-                MODEL_LIST_BY_PROVIDER = []
-                for model in MODEL_INFO:
-                    for provider in model["providers"]:
-                        id = f"{model['name']}:{provider}"
-                        MODEL_LIST_BY_PROVIDER.append({
-                            "id": id,
-                            "object": "model",
-                            "created": 0,
-                            "owned_by": "",
-                            "image": model["image"],
-                            "provider": provider,
-                        })
-                return {
-                    "object": "list",
-                    "data": MODEL_LIST_BY_PROVIDER
-                }
             return {
                 "object": "list",
                 "data": [{
@@ -312,17 +324,19 @@ class Api:
                     "created": 0,
                     "owned_by": "",
                     "image": isinstance(model, g4f.models.ImageModel),
+                    "vision": isinstance(model, g4f.models.VisionModel),
                     "provider": False,
                 } for model in AnyProvider.get_models()] +
                 [{
                     "id": provider_name,
                     "object": "model",
                     "created": 0,
-                    "owned_by": getattr(provider, "label", None),
+                    "owned_by": getattr(provider, "label", ""),
                     "image": bool(getattr(provider, "image_models", False)),
+                    "vision": bool(getattr(provider, "vision_models", False)),
                     "provider": True,
                 } for provider_name, provider in Provider.ProviderUtils.convert.items()
-                    if provider.working and provider_name not in ("Custom", "Puter")
+                    if provider.working and provider_name not in ("Custom")
                 ]
             }
 
@@ -355,9 +369,11 @@ class Api:
             HTTP_200_OK: {"model": ModelResponseModel},
             HTTP_404_NOT_FOUND: {"model": ErrorResponseModel},
         })
+        @self.app.post("/v1/models/{model_name}", responses={
+            HTTP_200_OK: {"model": ModelResponseModel},
+            HTTP_404_NOT_FOUND: {"model": ErrorResponseModel},
+        })
         async def model_info(model_name: str) -> ModelResponseModel:
-            if AppConfig.useSplitModels:
-                logger.warning(f"Using split models: {AppConfig.useSplitModels}")
             if model_name in g4f.models.ModelUtils.convert:
                 model_info = g4f.models.ModelUtils.convert[model_name]
                 return JSONResponse({
@@ -381,8 +397,8 @@ class Api:
             credentials: Annotated[HTTPAuthorizationCredentials, Depends(Api.security)] = None,
             provider: str = None,
             conversation_id: str = None,
+            x_user: Annotated[str | None, Header()] = None
         ):
-            logger.warning(f"HERE")
             try:
                 if config.provider is None:
                     config.provider = AppConfig.provider if provider is None else provider
@@ -416,43 +432,23 @@ class Api:
                             example = json.dumps({"media": [["data:image/jpeg;base64,...", "filename.jpg"]]})
                             return ErrorResponse.from_message(f'The media you send must be a data URIs. Example: {example}', status_code=HTTP_422_UNPROCESSABLE_ENTITY)
 
-                 
-                if AppConfig.useSplitModels:
-                    name,provider = get_name_and_provider(config.model)
-                    config.provider = provider
-                    config.model = name
-                    response = self.client.chat.completions.create(
-                        **filter_none(
+                # Create the completion response
+                response = self.client.chat.completions.create(
+                    **filter_none(
+                        **{
+                            "model": AppConfig.model,
+                            "provider": AppConfig.provider,
+                            "proxy": AppConfig.proxy,
+                            **config.dict(exclude_none=True),
                             **{
-                                "model": name,
-                                "provider": provider,
-                                "proxy": AppConfig.proxy,
-                                **config.dict(exclude_none=True),
-                                **{
-                                    "conversation_id": None,
-                                    "conversation": conversation
-                                }
-                            },
-                            # ignored=AppConfig.ignored_providers
-                        ),
-                    )
-                else:
-                    # Create the completion response
-                    response = self.client.chat.completions.create(
-                        **filter_none(
-                            **{
-                                "model": AppConfig.model,
-                                "provider": AppConfig.provider,
-                                "proxy": AppConfig.proxy,
-                                **config.dict(exclude_none=True),
-                                **{
-                                    "conversation_id": None,
-                                    "conversation": conversation
-                                }
-                            },
-                            ignored=AppConfig.ignored_providers
-                        ),
-                    )
+                                "conversation_id": None,
+                                "conversation": conversation,
+                                "user": x_user,
+                            }
+                        },
+                        ignored=AppConfig.ignored_providers
+                    ),
+                )
 
                 if not config.stream:
                     return await response
@@ -685,7 +681,7 @@ class Api:
             HTTP_500_INTERNAL_SERVER_ERROR: {"model": ErrorResponseModel},
         }
         @self.app.post("/v1/audio/speech", responses=responses)
-        @self.app.post("/api/{path_provider}/audio/speech", responses=responses)
+        @self.app.post("/api/{provider}/audio/speech", responses=responses)
         async def generate_speech(
             config: AudioSpeechConfig,
             provider: str = AppConfig.media_provider,
@@ -695,6 +691,7 @@ class Api:
             if credentials is not None and credentials.credentials != "secret":
                 api_key = credentials.credentials
             try:
+                audio = filter_none(voice=config.voice, format=config.response_format, language=config.language)
                 response = await self.client.chat.completions.create(
                     messages=[
                         {"role": "user", "content": f"{config.instrcutions} Text: {config.input}"}
@@ -702,10 +699,16 @@ class Api:
                     model=config.model,
                     provider=config.provider if provider is None else provider,
                     prompt=config.input,
-                    audio=filter_none(voice=config.voice, format=config.response_format, language=config.language),
                     api_key=api_key,
+                    download_media=config.download_media,
+                    **filter_none(
+                        audio=audio if audio else None,
+                    )
                 )
-                if isinstance(response.choices[0].message.content, AudioResponse):
+                if response.choices[0].message.audio is not None:
+                    response = base64.b64decode(response.choices[0].message.audio.data)
+                    return Response(response, media_type=f"audio/{config.response_format.replace('mp3', 'mpeg')}")
+                elif isinstance(response.choices[0].message.content, AudioResponse):
                     response = response.choices[0].message.content.data
                     response = response.replace("/media", get_media_dir())
                     def delete_file():
@@ -764,7 +767,7 @@ class Api:
                 if m:
                     return int(m.group(0))
                 else:
-                    raise ValueError("No timestamp found in filename")
+                    return 0
             target = os.path.join(get_media_dir(), os.path.basename(filename))
             if thumbnail and has_pillow:
                 thumbnail_dir = os.path.join(get_media_dir(), "thumbnails")
@@ -879,9 +882,8 @@ def run_api(
     host: str = '0.0.0.0',
     port: int = None,
     bind: str = None,
-    debug: bool = True,
+    debug: bool = False,
     use_colors: bool = None,
-    useSplitModels: bool = True,
     **kwargs
 ) -> None:
     print(f'Starting server... [g4f v-{g4f.version.utils.current_version}]' + (" (debug)" if debug else ""))
@@ -901,7 +903,7 @@ def run_api(
         method = "create_app_with_gui_and_debug"
     else:
         method = "create_app_debug" if debug else "create_app"
-    AppConfig.useSplitModels = useSplitModels
+    
     uvicorn.run(
         f"g4f.api:{method}",
         host=host,

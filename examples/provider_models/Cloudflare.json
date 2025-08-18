@@ -1,0 +1,392 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-coder-6.7b-base",
+    "model": "deepseek-coder-6.7b-base",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-coder-6.7b",
+    "model": "deepseek-coder-6.7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-math-7b",
+    "model": "deepseek-math-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-distill-qwen-32b",
+    "model": "deepseek-distill-qwen-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "discolm-german-7b-v1",
+    "model": "discolm-german-7b-v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "falcon-7b",
+    "model": "falcon-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-12b",
+    "model": "gemma-3-12b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-7b",
+    "model": "gemma-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "hermes-2-pro-mistral-7b",
+    "model": "hermes-2-pro-mistral-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-2-13b",
+    "model": "llama-2-13b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-2-7b-fp16",
+    "model": "llama-2-7b-fp16",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-2-7b",
+    "model": "llama-2-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3-8b",
+    "model": "llama-3-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.1-8b",
+    "model": "llama-3.1-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-11b-vision",
+    "model": "llama-3.2-11b-vision",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-1b",
+    "model": "llama-3.2-1b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-3b",
+    "model": "llama-3.2-3b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "llama-3.3-70b",
+    "model": "llama-3.3-70b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-scout",
+    "model": "llama-4-scout",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-guard-3-8b",
+    "model": "llama-guard-3-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llamaguard-7b",
+    "model": "llamaguard-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-7b-v0.1",
+    "model": "mistral-7b-v0.1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-7b-v0.2",
+    "model": "mistral-7b-v0.2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-small-3.1-24b",
+    "model": "mistral-small-3.1-24b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "neural-7b-v3-1",
+    "model": "neural-7b-v3-1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "openchat-3.5-0106",
+    "model": "openchat-3.5-0106",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "openhermes-2.5-mistral-7b",
+    "model": "openhermes-2.5-mistral-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phi-2",
+    "model": "phi-2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen1.5-0.5b",
+    "model": "qwen1.5-0.5b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-1.5-1.8b",
+    "model": "qwen-1.5-1.8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-1.5-14b",
+    "model": "qwen-1.5-14b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-1.5-7b",
+    "model": "qwen-1.5-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2.5-coder-32b",
+    "model": "qwen-2.5-coder-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwq-32b",
+    "model": "qwq-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sqlcoder-7b-2",
+    "model": "sqlcoder-7b-2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "starling-lm-7b-beta",
+    "model": "starling-lm-7b-beta",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tinyllama-1.1b-v1.0",
+    "model": "tinyllama-1.1b-v1.0",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "una-cybertron-7b-v2-bf16",
+    "model": "una-cybertron-7b-v2-bf16",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "zephyr-7b-beta",
+    "model": "zephyr-7b-beta",
+    "video": false,
+    "vision": false
+  }
+]

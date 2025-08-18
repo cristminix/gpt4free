@@ -1,0 +1,42 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "dall-e-3",
+    "model": "dall-e-3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "1024x1024",
+    "model": "1024x1024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "1024x1792",
+    "model": "1024x1792",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "1792x1024",
+    "model": "1792x1024",
+    "video": false,
+    "vision": false
+  }
+]

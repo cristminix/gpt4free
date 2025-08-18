@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "minimax",
+    "model": "minimax",
+    "video": false,
+    "vision": false
+  }
+]

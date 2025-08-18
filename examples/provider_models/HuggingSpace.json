@@ -1,0 +1,302 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-a",
+    "model": "command-a",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-a-03-2025",
+    "model": "command-a-03-2025",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r",
+    "model": "command-r",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-08-2024",
+    "model": "command-r-08-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-plus",
+    "model": "command-r-plus",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-plus-08-2024",
+    "model": "command-r-plus-08-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r7b",
+    "model": "command-r7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r7b-12-2024",
+    "model": "command-r7b-12-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r7b-arabic-02-2025",
+    "model": "command-r7b-arabic-02-2025",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux",
+    "model": "flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-dev",
+    "model": "flux-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-kontext-dev",
+    "model": "flux-kontext-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "janus-pro-7b",
+    "model": "janus-pro-7b",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "janus-pro-7b-image",
+    "model": "janus-pro-7b-image",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phi-4",
+    "model": "phi-4",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phi-4-multimodal",
+    "model": "phi-4-multimodal",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2-72b",
+    "model": "qwen-2-72b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2.5",
+    "model": "qwen-2.5",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2.5-1m",
+    "model": "qwen-2.5-1m",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2.5-max",
+    "model": "qwen-2.5-max",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-0.6b",
+    "model": "qwen-3-0.6b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-1.7b",
+    "model": "qwen-3-1.7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-14b",
+    "model": "qwen-3-14b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-235b",
+    "model": "qwen-3-235b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-30b",
+    "model": "qwen-3-30b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-30b-a3b",
+    "model": "qwen-3-30b-a3b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-32b",
+    "model": "qwen-3-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-4b",
+    "model": "qwen-3-4b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-8b",
+    "model": "qwen-3-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "sd-3.5-large",
+    "model": "sd-3.5-large",
+    "video": false,
+    "vision": false
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "command-a-03-2025",
+    "model": "command-a-03-2025",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-plus-08-2024",
+    "model": "command-r-plus-08-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-08-2024",
+    "model": "command-r-08-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r-plus",
+    "model": "command-r-plus",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r",
+    "model": "command-r",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r7b-12-2024",
+    "model": "command-r7b-12-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-r7b-arabic-02-2025",
+    "model": "command-r7b-arabic-02-2025",
+    "video": false,
+    "vision": false
+  }
+]

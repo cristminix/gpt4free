@@ -1,0 +1,102 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.0-flash",
+    "model": "gemini-2.0-flash",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.0-flash-lite",
+    "model": "gemini-2.0-flash-lite",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.0-flash-thinking-exp",
+    "model": "gemini-2.0-flash-thinking-exp",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gemini-2.5-flash",
+    "model": "gemini-2.5-flash",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-1b-it",
+    "model": "gemma-3-1b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-12b-it",
+    "model": "gemma-3-12b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-27b-it",
+    "model": "gemma-3-27b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-4b-it",
+    "model": "gemma-3-4b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3n-e2b-it",
+    "model": "gemma-3n-e2b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3n-e4b-it",
+    "model": "gemma-3n-e4b-it",
+    "video": false,
+    "vision": false
+  }
+]

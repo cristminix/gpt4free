@@ -1,0 +1,3652 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-TI2V-5B",
+    "model": "Wan-AI/Wan2.2-TI2V-5B",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-TI2V-5B:replicate",
+    "model": "Wan-AI/Wan2.2-TI2V-5B:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-T2V-A14B",
+    "model": "Wan-AI/Wan2.2-T2V-A14B",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-T2V-A14B:fal-ai",
+    "model": "Wan-AI/Wan2.2-T2V-A14B:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-T2V-A14B:replicate",
+    "model": "Wan-AI/Wan2.2-T2V-A14B:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.1-T2V-14B",
+    "model": "Wan-AI/Wan2.1-T2V-14B",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.1-T2V-14B:novita",
+    "model": "Wan-AI/Wan2.1-T2V-14B:novita",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.1-T2V-14B:fal-ai",
+    "model": "Wan-AI/Wan2.1-T2V-14B:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.1-T2V-14B:replicate",
+    "model": "Wan-AI/Wan2.1-T2V-14B:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-T2V-A14B-Diffusers",
+    "model": "Wan-AI/Wan2.2-T2V-A14B-Diffusers",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Wan-AI/Wan2.2-T2V-A14B-Diffusers:fal-ai",
+    "model": "Wan-AI/Wan2.2-T2V-A14B-Diffusers:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tencent/HunyuanVideo",
+    "model": "tencent/HunyuanVideo",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tencent/HunyuanVideo:fal-ai",
+    "model": "tencent/HunyuanVideo:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "genmo/mochi-1-preview",
+    "model": "genmo/mochi-1-preview",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "genmo/mochi-1-preview:fal-ai",
+    "model": "genmo/mochi-1-preview:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "zai-org/CogVideoX-5b",
+    "model": "zai-org/CogVideoX-5b",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "zai-org/CogVideoX-5b:fal-ai",
+    "model": "zai-org/CogVideoX-5b:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Qwen/Qwen-Image",
+    "model": "Qwen/Qwen-Image",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen-Image:fal-ai",
+    "model": "Qwen/Qwen-Image:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen-Image:replicate",
+    "model": "Qwen/Qwen-Image:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-Krea-dev",
+    "model": "black-forest-labs/FLUX.1-Krea-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-Krea-dev:fal-ai",
+    "model": "black-forest-labs/FLUX.1-Krea-dev:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-Krea-dev:replicate",
+    "model": "black-forest-labs/FLUX.1-Krea-dev:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-dev",
+    "model": "black-forest-labs/FLUX.1-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-dev:nebius",
+    "model": "black-forest-labs/FLUX.1-dev:nebius",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-dev:together",
+    "model": "black-forest-labs/FLUX.1-dev:together",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-dev:fal-ai",
+    "model": "black-forest-labs/FLUX.1-dev:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-dev:replicate",
+    "model": "black-forest-labs/FLUX.1-dev:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0:nebius",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0:nebius",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0:nscale",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0:nscale",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0:replicate",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0:hf-inference",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0:hf-inference",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-schnell",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:nebius",
+    "model": "black-forest-labs/FLUX.1-schnell:nebius",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:together",
+    "model": "black-forest-labs/FLUX.1-schnell:together",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:nscale",
+    "model": "black-forest-labs/FLUX.1-schnell:nscale",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:fal-ai",
+    "model": "black-forest-labs/FLUX.1-schnell:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:replicate",
+    "model": "black-forest-labs/FLUX.1-schnell:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "black-forest-labs/FLUX.1-schnell:hf-inference",
+    "model": "black-forest-labs/FLUX.1-schnell:hf-inference",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-3.5-large",
+    "model": "stabilityai/stable-diffusion-3.5-large",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3.5-large:fal-ai",
+    "model": "stabilityai/stable-diffusion-3.5-large:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3.5-large:replicate",
+    "model": "stabilityai/stable-diffusion-3.5-large:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ByteDance/Hyper-SD",
+    "model": "ByteDance/Hyper-SD",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ByteDance/Hyper-SD:fal-ai",
+    "model": "ByteDance/Hyper-SD:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ByteDance/Hyper-SD:replicate",
+    "model": "ByteDance/Hyper-SD:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ByteDance/Hyper-SD:replicate",
+    "model": "ByteDance/Hyper-SD:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ByteDance/SDXL-Lightning",
+    "model": "ByteDance/SDXL-Lightning",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ByteDance/SDXL-Lightning:fal-ai",
+    "model": "ByteDance/SDXL-Lightning:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ByteDance/SDXL-Lightning:replicate",
+    "model": "ByteDance/SDXL-Lightning:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "fofr/sdxl-emoji",
+    "model": "fofr/sdxl-emoji",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "fofr/sdxl-emoji:fal-ai",
+    "model": "fofr/sdxl-emoji:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-3.5-medium",
+    "model": "stabilityai/stable-diffusion-3.5-medium",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3.5-medium:fal-ai",
+    "model": "stabilityai/stable-diffusion-3.5-medium:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "XLabs-AI/flux-RealismLora",
+    "model": "XLabs-AI/flux-RealismLora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "XLabs-AI/flux-RealismLora:fal-ai",
+    "model": "XLabs-AI/flux-RealismLora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "XLabs-AI/flux-RealismLora:replicate",
+    "model": "XLabs-AI/flux-RealismLora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-3-medium",
+    "model": "stabilityai/stable-diffusion-3-medium",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3-medium:fal-ai",
+    "model": "stabilityai/stable-diffusion-3-medium:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3-medium:replicate",
+    "model": "stabilityai/stable-diffusion-3-medium:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design:fal-ai",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design:replicate",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Logo-Design:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "blink7630/storyboard-sketch",
+    "model": "blink7630/storyboard-sketch",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "blink7630/storyboard-sketch:fal-ai",
+    "model": "blink7630/storyboard-sketch:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "playgroundai/playground-v2.5-1024px-aesthetic",
+    "model": "playgroundai/playground-v2.5-1024px-aesthetic",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "playgroundai/playground-v2.5-1024px-aesthetic:fal-ai",
+    "model": "playgroundai/playground-v2.5-1024px-aesthetic:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "sWizad/pokemon-trainer-sprite-pixelart",
+    "model": "sWizad/pokemon-trainer-sprite-pixelart",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sWizad/pokemon-trainer-sprite-pixelart:fal-ai",
+    "model": "sWizad/pokemon-trainer-sprite-pixelart:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alvdansen/midsommarcartoon",
+    "model": "alvdansen/midsommarcartoon",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/midsommarcartoon:fal-ai",
+    "model": "alvdansen/midsommarcartoon:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "multimodalart/flux-tarot-v1",
+    "model": "multimodalart/flux-tarot-v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "multimodalart/flux-tarot-v1:fal-ai",
+    "model": "multimodalart/flux-tarot-v1:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "multimodalart/flux-tarot-v1:replicate",
+    "model": "multimodalart/flux-tarot-v1:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "aleksa-codes/flux-ghibsky-illustration",
+    "model": "aleksa-codes/flux-ghibsky-illustration",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "aleksa-codes/flux-ghibsky-illustration:fal-ai",
+    "model": "aleksa-codes/flux-ghibsky-illustration:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "aleksa-codes/flux-ghibsky-illustration:replicate",
+    "model": "aleksa-codes/flux-ghibsky-illustration:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art",
+    "model": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art:fal-ai",
+    "model": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art:replicate",
+    "model": "UmeAiRT/FLUX.1-dev-LoRA-Modern_Pixel_art:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Super-Realism-LoRA",
+    "model": "strangerzonehf/Flux-Super-Realism-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Super-Realism-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Super-Realism-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Super-Realism-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Super-Realism-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Midjourney-Mix2-LoRA",
+    "model": "strangerzonehf/Flux-Midjourney-Mix2-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Midjourney-Mix2-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Midjourney-Mix2-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Midjourney-Mix2-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Midjourney-Mix2-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Icon-Kit-LoRA",
+    "model": "strangerzonehf/Flux-Icon-Kit-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Icon-Kit-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Icon-Kit-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Icon-Kit-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Icon-Kit-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "HiDream-ai/HiDream-I1-Full",
+    "model": "HiDream-ai/HiDream-I1-Full",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "HiDream-ai/HiDream-I1-Full:fal-ai",
+    "model": "HiDream-ai/HiDream-I1-Full:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "multimodalart/isometric-skeumorphic-3d-bnb",
+    "model": "multimodalart/isometric-skeumorphic-3d-bnb",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "multimodalart/isometric-skeumorphic-3d-bnb:fal-ai",
+    "model": "multimodalart/isometric-skeumorphic-3d-bnb:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "multimodalart/isometric-skeumorphic-3d-bnb:replicate",
+    "model": "multimodalart/isometric-skeumorphic-3d-bnb:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "TheLastBen/Josef_Koudelka_Style_SDXL",
+    "model": "TheLastBen/Josef_Koudelka_Style_SDXL",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "TheLastBen/Josef_Koudelka_Style_SDXL:fal-ai",
+    "model": "TheLastBen/Josef_Koudelka_Style_SDXL:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "nerijs/lego-minifig-xl",
+    "model": "nerijs/lego-minifig-xl",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nerijs/lego-minifig-xl:fal-ai",
+    "model": "nerijs/lego-minifig-xl:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "artificialguybr/StickersRedmond",
+    "model": "artificialguybr/StickersRedmond",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "artificialguybr/StickersRedmond:fal-ai",
+    "model": "artificialguybr/StickersRedmond:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "JCTN/JCTN_LORAxl",
+    "model": "JCTN/JCTN_LORAxl",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "JCTN/JCTN_LORAxl:fal-ai",
+    "model": "JCTN/JCTN_LORAxl:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "piebro/factorio-blueprint-visualizations-sdxl-lora",
+    "model": "piebro/factorio-blueprint-visualizations-sdxl-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "piebro/factorio-blueprint-visualizations-sdxl-lora:fal-ai",
+    "model": "piebro/factorio-blueprint-visualizations-sdxl-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ntc-ai/SDXL-LoRA-slider.makeup",
+    "model": "ntc-ai/SDXL-LoRA-slider.makeup",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ntc-ai/SDXL-LoRA-slider.makeup:fal-ai",
+    "model": "ntc-ai/SDXL-LoRA-slider.makeup:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "taki0112/lora-trained-xl_cartoon-line-drawings_split",
+    "model": "taki0112/lora-trained-xl_cartoon-line-drawings_split",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "taki0112/lora-trained-xl_cartoon-line-drawings_split:fal-ai",
+    "model": "taki0112/lora-trained-xl_cartoon-line-drawings_split:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ntc-ai/SDXL-LoRA-slider.friendly-smile",
+    "model": "ntc-ai/SDXL-LoRA-slider.friendly-smile",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ntc-ai/SDXL-LoRA-slider.friendly-smile:fal-ai",
+    "model": "ntc-ai/SDXL-LoRA-slider.friendly-smile:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "thwri/dark-gothic-fantasy-xl",
+    "model": "thwri/dark-gothic-fantasy-xl",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "thwri/dark-gothic-fantasy-xl:fal-ai",
+    "model": "thwri/dark-gothic-fantasy-xl:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "tonyassi/warhol-lora",
+    "model": "tonyassi/warhol-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tonyassi/warhol-lora:fal-ai",
+    "model": "tonyassi/warhol-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "PixArt-alpha/PixArt-Sigma-XL-2-1024-MS",
+    "model": "PixArt-alpha/PixArt-Sigma-XL-2-1024-MS",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "PixArt-alpha/PixArt-Sigma-XL-2-1024-MS:fal-ai",
+    "model": "PixArt-alpha/PixArt-Sigma-XL-2-1024-MS:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "MarkBW/olivia-casta-xl",
+    "model": "MarkBW/olivia-casta-xl",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "MarkBW/olivia-casta-xl:fal-ai",
+    "model": "MarkBW/olivia-casta-xl:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "kuei1026/3d-icon-sdxl-lora-rank-64",
+    "model": "kuei1026/3d-icon-sdxl-lora-rank-64",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "kuei1026/3d-icon-sdxl-lora-rank-64:fal-ai",
+    "model": "kuei1026/3d-icon-sdxl-lora-rank-64:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Kwai-Kolors/Kolors",
+    "model": "Kwai-Kolors/Kolors",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Kwai-Kolors/Kolors:fal-ai",
+    "model": "Kwai-Kolors/Kolors:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alvdansen/japanese-poster-prints",
+    "model": "alvdansen/japanese-poster-prints",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/japanese-poster-prints:fal-ai",
+    "model": "alvdansen/japanese-poster-prints:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "MarkBW/neon-gothic-xl",
+    "model": "MarkBW/neon-gothic-xl",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "MarkBW/neon-gothic-xl:fal-ai",
+    "model": "MarkBW/neon-gothic-xl:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Changg/lora-sdxl-line",
+    "model": "Changg/lora-sdxl-line",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Changg/lora-sdxl-line:fal-ai",
+    "model": "Changg/lora-sdxl-line:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "prithivMLmods/Canopus-Isometric-InteriorDesign-3D",
+    "model": "prithivMLmods/Canopus-Isometric-InteriorDesign-3D",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Canopus-Isometric-InteriorDesign-3D:fal-ai",
+    "model": "prithivMLmods/Canopus-Isometric-InteriorDesign-3D:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alvdansen/softserve_anime",
+    "model": "alvdansen/softserve_anime",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/softserve_anime:fal-ai",
+    "model": "alvdansen/softserve_anime:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/softserve_anime:replicate",
+    "model": "alvdansen/softserve_anime:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "fal/AuraFlow-v0.3",
+    "model": "fal/AuraFlow-v0.3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "fal/AuraFlow-v0.3:fal-ai",
+    "model": "fal/AuraFlow-v0.3:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Tech-Meld/her-eyes",
+    "model": "Tech-Meld/her-eyes",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Tech-Meld/her-eyes:fal-ai",
+    "model": "Tech-Meld/her-eyes:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alvdansen/haunted_linework_flux",
+    "model": "alvdansen/haunted_linework_flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/haunted_linework_flux:fal-ai",
+    "model": "alvdansen/haunted_linework_flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/haunted_linework_flux:replicate",
+    "model": "alvdansen/haunted_linework_flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "davisbro/flux-multi-angle",
+    "model": "davisbro/flux-multi-angle",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "davisbro/flux-multi-angle:fal-ai",
+    "model": "davisbro/flux-multi-angle:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "davisbro/flux-multi-angle:replicate",
+    "model": "davisbro/flux-multi-angle:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "nerijs/dark-fantasy-illustration-flux",
+    "model": "nerijs/dark-fantasy-illustration-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nerijs/dark-fantasy-illustration-flux:fal-ai",
+    "model": "nerijs/dark-fantasy-illustration-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nerijs/dark-fantasy-illustration-flux:replicate",
+    "model": "nerijs/dark-fantasy-illustration-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "SebastianBodza/flux_lora_retro_linedrawing_style_v1",
+    "model": "SebastianBodza/flux_lora_retro_linedrawing_style_v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "SebastianBodza/flux_lora_retro_linedrawing_style_v1:fal-ai",
+    "model": "SebastianBodza/flux_lora_retro_linedrawing_style_v1:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "SebastianBodza/flux_lora_retro_linedrawing_style_v1:replicate",
+    "model": "SebastianBodza/flux_lora_retro_linedrawing_style_v1:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "lichorosario/flux-lora-rtmi",
+    "model": "lichorosario/flux-lora-rtmi",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "lichorosario/flux-lora-rtmi:fal-ai",
+    "model": "lichorosario/flux-lora-rtmi:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "lichorosario/flux-lora-rtmi:replicate",
+    "model": "lichorosario/flux-lora-rtmi:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-add-details",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-add-details",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-add-details:fal-ai",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-add-details:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-add-details:replicate",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-add-details:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Omarito2412/Dark-Fantasy-Flux",
+    "model": "Omarito2412/Dark-Fantasy-Flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Omarito2412/Dark-Fantasy-Flux:fal-ai",
+    "model": "Omarito2412/Dark-Fantasy-Flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Omarito2412/Dark-Fantasy-Flux:replicate",
+    "model": "Omarito2412/Dark-Fantasy-Flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "aditxgupta/sai_pallavi_lora",
+    "model": "aditxgupta/sai_pallavi_lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "aditxgupta/sai_pallavi_lora:fal-ai",
+    "model": "aditxgupta/sai_pallavi_lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "aditxgupta/sai_pallavi_lora:replicate",
+    "model": "aditxgupta/sai_pallavi_lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "pablobonilla/flux-realistic-lora",
+    "model": "pablobonilla/flux-realistic-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "pablobonilla/flux-realistic-lora:fal-ai",
+    "model": "pablobonilla/flux-realistic-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "pablobonilla/flux-realistic-lora:replicate",
+    "model": "pablobonilla/flux-realistic-lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alvdansen/pola-photo-flux",
+    "model": "alvdansen/pola-photo-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/pola-photo-flux:fal-ai",
+    "model": "alvdansen/pola-photo-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alvdansen/pola-photo-flux:replicate",
+    "model": "alvdansen/pola-photo-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Jovie/Midjourney",
+    "model": "Jovie/Midjourney",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jovie/Midjourney:fal-ai",
+    "model": "Jovie/Midjourney:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jovie/Midjourney:replicate",
+    "model": "Jovie/Midjourney:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif/dithering",
+    "model": "glif/dithering",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif/dithering:fal-ai",
+    "model": "glif/dithering:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif/dithering:replicate",
+    "model": "glif/dithering:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "renderartist/simplevectorflux",
+    "model": "renderartist/simplevectorflux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "renderartist/simplevectorflux:fal-ai",
+    "model": "renderartist/simplevectorflux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "renderartist/simplevectorflux:replicate",
+    "model": "renderartist/simplevectorflux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/maxxd4240_minimalistPastel",
+    "model": "glif-loradex-trainer/maxxd4240_minimalistPastel",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/maxxd4240_minimalistPastel:fal-ai",
+    "model": "glif-loradex-trainer/maxxd4240_minimalistPastel:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/maxxd4240_minimalistPastel:replicate",
+    "model": "glif-loradex-trainer/maxxd4240_minimalistPastel:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/lemnop_Old_Book_Illustrations",
+    "model": "glif-loradex-trainer/lemnop_Old_Book_Illustrations",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/lemnop_Old_Book_Illustrations:fal-ai",
+    "model": "glif-loradex-trainer/lemnop_Old_Book_Illustrations:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/lemnop_Old_Book_Illustrations:replicate",
+    "model": "glif-loradex-trainer/lemnop_Old_Book_Illustrations:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ikmalsaid/jennifer-connelly-flux-dev-lora",
+    "model": "ikmalsaid/jennifer-connelly-flux-dev-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ikmalsaid/jennifer-connelly-flux-dev-lora:fal-ai",
+    "model": "ikmalsaid/jennifer-connelly-flux-dev-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ikmalsaid/jennifer-connelly-flux-dev-lora:replicate",
+    "model": "ikmalsaid/jennifer-connelly-flux-dev-lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "cfahlgren1/flux-qwen-capybara",
+    "model": "cfahlgren1/flux-qwen-capybara",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cfahlgren1/flux-qwen-capybara:fal-ai",
+    "model": "cfahlgren1/flux-qwen-capybara:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cfahlgren1/flux-qwen-capybara:replicate",
+    "model": "cfahlgren1/flux-qwen-capybara:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Purz/choose-your-own-adventure",
+    "model": "Purz/choose-your-own-adventure",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Purz/choose-your-own-adventure:fal-ai",
+    "model": "Purz/choose-your-own-adventure:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Purz/choose-your-own-adventure:replicate",
+    "model": "Purz/choose-your-own-adventure:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0",
+    "model": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0:fal-ai",
+    "model": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0:replicate",
+    "model": "prithivMLmods/Canopus-LoRA-Flux-UltraRealism-2.0:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "martintomov/ecom-flux-v1",
+    "model": "martintomov/ecom-flux-v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "martintomov/ecom-flux-v1:fal-ai",
+    "model": "martintomov/ecom-flux-v1:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "martintomov/ecom-flux-v1:replicate",
+    "model": "martintomov/ecom-flux-v1:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art",
+    "model": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art:fal-ai",
+    "model": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art:replicate",
+    "model": "glif-loradex-trainer/araminta_k_flux_dev_illustration_art:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "connersdavis/storyboard-v2",
+    "model": "connersdavis/storyboard-v2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "connersdavis/storyboard-v2:fal-ai",
+    "model": "connersdavis/storyboard-v2:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster:fal-ai",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster:replicate",
+    "model": "Shakker-Labs/FLUX.1-dev-LoRA-Text-Poster:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1",
+    "model": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1:fal-ai",
+    "model": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1:replicate",
+    "model": "lustlyai/Flux_Lustly.ai_Uncensored_nsfw_v1:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-3.5-large-turbo",
+    "model": "stabilityai/stable-diffusion-3.5-large-turbo",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3.5-large-turbo:fal-ai",
+    "model": "stabilityai/stable-diffusion-3.5-large-turbo:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stabilityai/stable-diffusion-3.5-large-turbo:replicate",
+    "model": "stabilityai/stable-diffusion-3.5-large-turbo:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/elizabeth-olsen-sdxl-flux",
+    "model": "Keltezaa/elizabeth-olsen-sdxl-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/elizabeth-olsen-sdxl-flux:fal-ai",
+    "model": "Keltezaa/elizabeth-olsen-sdxl-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/elizabeth-olsen-sdxl-flux:replicate",
+    "model": "Keltezaa/elizabeth-olsen-sdxl-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/lindsay-lohan-actress-2006-flux",
+    "model": "Keltezaa/lindsay-lohan-actress-2006-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/lindsay-lohan-actress-2006-flux:fal-ai",
+    "model": "Keltezaa/lindsay-lohan-actress-2006-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/lindsay-lohan-actress-2006-flux:replicate",
+    "model": "Keltezaa/lindsay-lohan-actress-2006-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/jennifer-connelly-1990-flux",
+    "model": "Keltezaa/jennifer-connelly-1990-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/jennifer-connelly-1990-flux:fal-ai",
+    "model": "Keltezaa/jennifer-connelly-1990-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/jennifer-connelly-1990-flux:replicate",
+    "model": "Keltezaa/jennifer-connelly-1990-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "2ch/penflux",
+    "model": "2ch/penflux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "2ch/penflux:fal-ai",
+    "model": "2ch/penflux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "2ch/penflux:replicate",
+    "model": "2ch/penflux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "gokaygokay/Flux-Seamless-Texture-LoRA",
+    "model": "gokaygokay/Flux-Seamless-Texture-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gokaygokay/Flux-Seamless-Texture-LoRA:fal-ai",
+    "model": "gokaygokay/Flux-Seamless-Texture-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gokaygokay/Flux-Seamless-Texture-LoRA:replicate",
+    "model": "gokaygokay/Flux-Seamless-Texture-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA",
+    "model": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA:fal-ai",
+    "model": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA:replicate",
+    "model": "prithivMLmods/Ton618-Only-Stickers-Flux-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "prithivMLmods/Super-Pencil-Flux-LoRA",
+    "model": "prithivMLmods/Super-Pencil-Flux-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Super-Pencil-Flux-LoRA:fal-ai",
+    "model": "prithivMLmods/Super-Pencil-Flux-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Super-Pencil-Flux-LoRA:replicate",
+    "model": "prithivMLmods/Super-Pencil-Flux-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "alastandy/Add-Dental-Braces",
+    "model": "alastandy/Add-Dental-Braces",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alastandy/Add-Dental-Braces:fal-ai",
+    "model": "alastandy/Add-Dental-Braces:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "alastandy/Add-Dental-Braces:replicate",
+    "model": "alastandy/Add-Dental-Braces:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA",
+    "model": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA:fal-ai",
+    "model": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA:replicate",
+    "model": "prithivMLmods/Flux.1-Dev-Stamp-Art-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA",
+    "model": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Cute-3D-Kawaii-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1",
+    "model": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1:fal-ai",
+    "model": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1:replicate",
+    "model": "ECNU-CILab/ArtAug-lora-FLUX.1dev-v1:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Claymation-XC-LoRA",
+    "model": "strangerzonehf/Flux-Claymation-XC-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Claymation-XC-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Claymation-XC-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Claymation-XC-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Claymation-XC-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Datou1111/shou_xin",
+    "model": "Datou1111/shou_xin",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Datou1111/shou_xin:fal-ai",
+    "model": "Datou1111/shou_xin:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Datou1111/shou_xin:replicate",
+    "model": "Datou1111/shou_xin:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Microworld-NFT-LoRA",
+    "model": "strangerzonehf/Flux-Microworld-NFT-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Microworld-NFT-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Microworld-NFT-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Microworld-NFT-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Microworld-NFT-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion",
+    "model": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion:fal-ai",
+    "model": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion:replicate",
+    "model": "glif-loradex-trainer/kklors_flux_dev_ultra_low_angle_fashion:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA",
+    "model": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Xmas-Isometric-Kit-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "tsala3p/flux-dev-mc-creative-logo-images-lora",
+    "model": "tsala3p/flux-dev-mc-creative-logo-images-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tsala3p/flux-dev-mc-creative-logo-images-lora:fal-ai",
+    "model": "tsala3p/flux-dev-mc-creative-logo-images-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tsala3p/flux-dev-mc-creative-logo-images-lora:replicate",
+    "model": "tsala3p/flux-dev-mc-creative-logo-images-lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "thwri/dark-gothic-fantasy-flux",
+    "model": "thwri/dark-gothic-fantasy-flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "thwri/dark-gothic-fantasy-flux:fal-ai",
+    "model": "thwri/dark-gothic-fantasy-flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "thwri/dark-gothic-fantasy-flux:replicate",
+    "model": "thwri/dark-gothic-fantasy-flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Alpha-VLLM/Lumina-Image-2.0",
+    "model": "Alpha-VLLM/Lumina-Image-2.0",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Alpha-VLLM/Lumina-Image-2.0:fal-ai",
+    "model": "Alpha-VLLM/Lumina-Image-2.0:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "n1x-ax/Orth-Art",
+    "model": "n1x-ax/Orth-Art",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "n1x-ax/Orth-Art:fal-ai",
+    "model": "n1x-ax/Orth-Art:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "n1x-ax/Orth-Art:replicate",
+    "model": "n1x-ax/Orth-Art:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass",
+    "model": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass:fal-ai",
+    "model": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass:replicate",
+    "model": "uriel353/mewtwo-body-type-pear-body-small-breasts-and-wide-hips-big-ass:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ashishlmpmishra/sketarts-pencil-sketch",
+    "model": "ashishlmpmishra/sketarts-pencil-sketch",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ashishlmpmishra/sketarts-pencil-sketch:fal-ai",
+    "model": "ashishlmpmishra/sketarts-pencil-sketch:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ashishlmpmishra/sketarts-pencil-sketch:replicate",
+    "model": "ashishlmpmishra/sketarts-pencil-sketch:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/Dynamic_Pose_Uncensored",
+    "model": "Keltezaa/Dynamic_Pose_Uncensored",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/Dynamic_Pose_Uncensored:fal-ai",
+    "model": "Keltezaa/Dynamic_Pose_Uncensored:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/Dynamic_Pose_Uncensored:replicate",
+    "model": "Keltezaa/Dynamic_Pose_Uncensored:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Jonjew/Honkai3rd",
+    "model": "Jonjew/Honkai3rd",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jonjew/Honkai3rd:fal-ai",
+    "model": "Jonjew/Honkai3rd:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jonjew/Honkai3rd:replicate",
+    "model": "Jonjew/Honkai3rd:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/Lamia-000_Antoinette",
+    "model": "glif-loradex-trainer/Lamia-000_Antoinette",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/Lamia-000_Antoinette:fal-ai",
+    "model": "glif-loradex-trainer/Lamia-000_Antoinette:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/Lamia-000_Antoinette:replicate",
+    "model": "glif-loradex-trainer/Lamia-000_Antoinette:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz",
+    "model": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz:fal-ai",
+    "model": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz:replicate",
+    "model": "glif-loradex-trainer/Swap_agrawal14_violet_vectorz:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/001_old_horror_paintings-autocaption",
+    "model": "glif-loradex-trainer/001_old_horror_paintings-autocaption",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/001_old_horror_paintings-autocaption:fal-ai",
+    "model": "glif-loradex-trainer/001_old_horror_paintings-autocaption:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/001_old_horror_paintings-autocaption:replicate",
+    "model": "glif-loradex-trainer/001_old_horror_paintings-autocaption:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "torrikabe/idnbeauty",
+    "model": "torrikabe/idnbeauty",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "torrikabe/idnbeauty:fal-ai",
+    "model": "torrikabe/idnbeauty:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "torrikabe/idnbeauty:replicate",
+    "model": "torrikabe/idnbeauty:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Jonjew/TerryFarrellEarly90s",
+    "model": "Jonjew/TerryFarrellEarly90s",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jonjew/TerryFarrellEarly90s:fal-ai",
+    "model": "Jonjew/TerryFarrellEarly90s:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Jonjew/TerryFarrellEarly90s:replicate",
+    "model": "Jonjew/TerryFarrellEarly90s:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "glif-loradex-trainer/kklors_Eyes",
+    "model": "glif-loradex-trainer/kklors_Eyes",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/kklors_Eyes:fal-ai",
+    "model": "glif-loradex-trainer/kklors_Eyes:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glif-loradex-trainer/kklors_Eyes:replicate",
+    "model": "glif-loradex-trainer/kklors_Eyes:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "minpeter/LoRA-FLUX-anime-style-v2",
+    "model": "minpeter/LoRA-FLUX-anime-style-v2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "minpeter/LoRA-FLUX-anime-style-v2:fal-ai",
+    "model": "minpeter/LoRA-FLUX-anime-style-v2:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "minpeter/LoRA-FLUX-anime-style-v2:replicate",
+    "model": "minpeter/LoRA-FLUX-anime-style-v2:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Thread-of-Art-Flux",
+    "model": "strangerzonehf/Thread-of-Art-Flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Thread-of-Art-Flux:fal-ai",
+    "model": "strangerzonehf/Thread-of-Art-Flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Thread-of-Art-Flux:replicate",
+    "model": "strangerzonehf/Thread-of-Art-Flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "HiDream-ai/HiDream-I1-Fast",
+    "model": "HiDream-ai/HiDream-I1-Fast",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "HiDream-ai/HiDream-I1-Fast:fal-ai",
+    "model": "HiDream-ai/HiDream-I1-Fast:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "cwhuh/babyface_flux_dlora_3_Indonesian",
+    "model": "cwhuh/babyface_flux_dlora_3_Indonesian",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cwhuh/babyface_flux_dlora_3_Indonesian:fal-ai",
+    "model": "cwhuh/babyface_flux_dlora_3_Indonesian:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cwhuh/babyface_flux_dlora_3_Indonesian:replicate",
+    "model": "cwhuh/babyface_flux_dlora_3_Indonesian:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "cjb3URTH89/julia",
+    "model": "cjb3URTH89/julia",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cjb3URTH89/julia:fal-ai",
+    "model": "cjb3URTH89/julia:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cjb3URTH89/julia:replicate",
+    "model": "cjb3URTH89/julia:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "uriel353/alina-becker",
+    "model": "uriel353/alina-becker",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/alina-becker:fal-ai",
+    "model": "uriel353/alina-becker:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/alina-becker:replicate",
+    "model": "uriel353/alina-becker:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Midjourney-Painterly-LoRA",
+    "model": "strangerzonehf/Flux-Midjourney-Painterly-LoRA",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Midjourney-Painterly-LoRA:fal-ai",
+    "model": "strangerzonehf/Flux-Midjourney-Painterly-LoRA:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Midjourney-Painterly-LoRA:replicate",
+    "model": "strangerzonehf/Flux-Midjourney-Painterly-LoRA:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "rmsandu/fourviews-incontext-lora",
+    "model": "rmsandu/fourviews-incontext-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "rmsandu/fourviews-incontext-lora:fal-ai",
+    "model": "rmsandu/fourviews-incontext-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "rmsandu/fourviews-incontext-lora:replicate",
+    "model": "rmsandu/fourviews-incontext-lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128",
+    "model": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128:fal-ai",
+    "model": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128:replicate",
+    "model": "uriel353/fluxpony-perfect-full-round-breasts-and-slim-waist_V3_R128:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ajinkyaT/Interiorly-gen1-dev",
+    "model": "ajinkyaT/Interiorly-gen1-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ajinkyaT/Interiorly-gen1-dev:fal-ai",
+    "model": "ajinkyaT/Interiorly-gen1-dev:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "ajinkyaT/Interiorly-gen1-dev:replicate",
+    "model": "ajinkyaT/Interiorly-gen1-dev:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "VOidChill/ayesha",
+    "model": "VOidChill/ayesha",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "VOidChill/ayesha:fal-ai",
+    "model": "VOidChill/ayesha:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "VOidChill/ayesha:replicate",
+    "model": "VOidChill/ayesha:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "strangerzonehf/Flux-Material-Glass-Cube",
+    "model": "strangerzonehf/Flux-Material-Glass-Cube",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Material-Glass-Cube:fal-ai",
+    "model": "strangerzonehf/Flux-Material-Glass-Cube:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "strangerzonehf/Flux-Material-Glass-Cube:replicate",
+    "model": "strangerzonehf/Flux-Material-Glass-Cube:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "tarfandoon/farshchian_flux",
+    "model": "tarfandoon/farshchian_flux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tarfandoon/farshchian_flux:fal-ai",
+    "model": "tarfandoon/farshchian_flux:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "tarfandoon/farshchian_flux:replicate",
+    "model": "tarfandoon/farshchian_flux:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Seryoger/M0sya",
+    "model": "Seryoger/M0sya",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Seryoger/M0sya:fal-ai",
+    "model": "Seryoger/M0sya:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Seryoger/M0sya:replicate",
+    "model": "Seryoger/M0sya:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "je-suis-tm/monica_bellucci_lora_flux_nf4",
+    "model": "je-suis-tm/monica_bellucci_lora_flux_nf4",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "je-suis-tm/monica_bellucci_lora_flux_nf4:fal-ai",
+    "model": "je-suis-tm/monica_bellucci_lora_flux_nf4:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "je-suis-tm/monica_bellucci_lora_flux_nf4:replicate",
+    "model": "je-suis-tm/monica_bellucci_lora_flux_nf4:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "openfree/flux-chatgpt-ghibli-lora",
+    "model": "openfree/flux-chatgpt-ghibli-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "openfree/flux-chatgpt-ghibli-lora:fal-ai",
+    "model": "openfree/flux-chatgpt-ghibli-lora:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "openfree/flux-chatgpt-ghibli-lora:replicate",
+    "model": "openfree/flux-chatgpt-ghibli-lora:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "CultriX/flux-nsfw-highress",
+    "model": "CultriX/flux-nsfw-highress",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "CultriX/flux-nsfw-highress:fal-ai",
+    "model": "CultriX/flux-nsfw-highress:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "CultriX/flux-nsfw-highress:replicate",
+    "model": "CultriX/flux-nsfw-highress:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "uriel353/photorealistic-nsfw",
+    "model": "uriel353/photorealistic-nsfw",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/photorealistic-nsfw:fal-ai",
+    "model": "uriel353/photorealistic-nsfw:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "uriel353/photorealistic-nsfw:replicate",
+    "model": "uriel353/photorealistic-nsfw:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "enhanceaiteam/Flux-uncensored",
+    "model": "enhanceaiteam/Flux-uncensored",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "enhanceaiteam/Flux-uncensored:fal-ai",
+    "model": "enhanceaiteam/Flux-uncensored:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "enhanceaiteam/Flux-uncensored:replicate",
+    "model": "enhanceaiteam/Flux-uncensored:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/super-realistic-anthropomorphic-animal-photography",
+    "model": "Keltezaa/super-realistic-anthropomorphic-animal-photography",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/super-realistic-anthropomorphic-animal-photography:fal-ai",
+    "model": "Keltezaa/super-realistic-anthropomorphic-animal-photography:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/super-realistic-anthropomorphic-animal-photography:replicate",
+    "model": "Keltezaa/super-realistic-anthropomorphic-animal-photography:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Keltezaa/NSFW_MASTER_FLUX",
+    "model": "Keltezaa/NSFW_MASTER_FLUX",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/NSFW_MASTER_FLUX:fal-ai",
+    "model": "Keltezaa/NSFW_MASTER_FLUX:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Keltezaa/NSFW_MASTER_FLUX:replicate",
+    "model": "Keltezaa/NSFW_MASTER_FLUX:replicate",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "anthienlong/enhanceaiteam_uncensored",
+    "model": "anthienlong/enhanceaiteam_uncensored",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "anthienlong/enhanceaiteam_uncensored:fal-ai",
+    "model": "anthienlong/enhanceaiteam_uncensored:fal-ai",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "anthienlong/enhanceaiteam_uncensored:replicate",
+    "model": "anthienlong/enhanceaiteam_uncensored:replicate",
+    "video": false,
+    "vision": false
+  }
+]

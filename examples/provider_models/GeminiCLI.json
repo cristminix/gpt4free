@@ -1,0 +1,22 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.5-flash",
+    "model": "gemini-2.5-flash",
+    "video": false,
+    "vision": false
+  }
+]

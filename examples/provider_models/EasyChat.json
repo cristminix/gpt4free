@@ -1,0 +1,92 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.0-flash",
+    "model": "gemini-2.0-flash",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.5-flash",
+    "model": "gemini-2.5-flash",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-4o",
+    "model": "gpt-4o",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-4o-mini-image",
+    "model": "gpt-4o-mini-image",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-4o-research",
+    "model": "gpt-4o-research",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gpt-oss-120b",
+    "model": "gpt-oss-120b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-3",
+    "model": "grok-3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-4-expert",
+    "model": "grok-4-expert",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-4",
+    "model": "grok-4",
+    "video": false,
+    "vision": false
+  }
+]

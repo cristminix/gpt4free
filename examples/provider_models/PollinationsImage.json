@@ -1,0 +1,37 @@
+[
+  {
+    "group": "Image Generation",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": true,
+        "image": true,
+        "label": "flux",
+        "model": "flux",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": true,
+        "label": "turbo",
+        "model": "turbo",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": true,
+        "label": "kontext",
+        "model": "kontext",
+        "video": false,
+        "vision": false
+      }
+    ]
+  }
+]

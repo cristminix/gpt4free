@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "sd-3.5-large",
+    "model": "sd-3.5-large",
+    "video": false,
+    "vision": false
+  }
+]

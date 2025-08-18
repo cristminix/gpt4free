@@ -1,0 +1,22 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-dev",
+    "model": "flux-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux",
+    "model": "flux",
+    "video": false,
+    "vision": false
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2-72b",
+    "model": "qwen-2-72b",
+    "video": false,
+    "vision": false
+  }
+]

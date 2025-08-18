@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": true,
+    "label": "flux-kontext-dev",
+    "model": "flux-kontext-dev",
+    "video": false,
+    "vision": false
+  }
+]

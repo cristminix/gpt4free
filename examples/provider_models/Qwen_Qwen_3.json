@@ -1,0 +1,82 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-8b",
+    "model": "qwen-3-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-30b-a3b",
+    "model": "qwen-3-30b-a3b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-1.7b",
+    "model": "qwen-3-1.7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-0.6b",
+    "model": "qwen-3-0.6b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "qwen-3-235b",
+    "model": "qwen-3-235b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-14b",
+    "model": "qwen-3-14b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-4b",
+    "model": "qwen-3-4b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-3-32b",
+    "model": "qwen-3-32b",
+    "video": false,
+    "vision": false
+  }
+]

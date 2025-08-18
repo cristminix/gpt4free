@@ -1,0 +1,82 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "GLM-4.5",
+    "model": "GLM-4.5",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GLM-4.5-Air",
+    "model": "GLM-4.5-Air",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GLM-4.5V",
+    "model": "GLM-4.5V",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GLM-4-32B",
+    "model": "GLM-4-32B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GLM-4.1V-9B-Thinking",
+    "model": "GLM-4.1V-9B-Thinking",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Z1-Rumination",
+    "model": "Z1-Rumination",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Z1-32B",
+    "model": "Z1-32B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "\u4efb\u52a1\u4e13\u7528",
+    "model": "\u4efb\u52a1\u4e13\u7528",
+    "video": false,
+    "vision": false
+  }
+]

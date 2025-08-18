@@ -1,0 +1,62 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GigaChat-2",
+    "model": "GigaChat-2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GigaChat-2-Pro",
+    "model": "GigaChat-2-Pro",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GigaChat-2-Max",
+    "model": "GigaChat-2-Max",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "GigaChat",
+    "model": "GigaChat",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GigaChat-Pro",
+    "model": "GigaChat-Pro",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "GigaChat-Max",
+    "model": "GigaChat-Max",
+    "video": false,
+    "vision": false
+  }
+]

@@ -1,0 +1,452 @@
+[
+  {
+    "group": "Text Generation",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": true,
+        "image": false,
+        "label": "openai",
+        "model": "openai",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "evil",
+        "model": "evil",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "deepseek-r1-0528",
+        "model": "deepseek-r1-0528",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "glm-4-9b-chat",
+        "model": "glm-4-9b-chat",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "gpt-5-nano",
+        "model": "gpt-5-nano",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "llama-3.2-1b",
+        "model": "llama-3.2-1b",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "llama-3.1-8b",
+        "model": "llama-3.1-8b",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "llama-4-scout-17b-16e",
+        "model": "llama-4-scout-17b-16e",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "mistral-small-3.1-24b",
+        "model": "mistral-small-3.1-24b",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "mistral-nemo-2407",
+        "model": "mistral-nemo-2407",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "mistral-small-cloudflare",
+        "model": "mistral-small-cloudflare",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "nova-micro-v1",
+        "model": "nova-micro-v1",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "gpt-4.1-nano",
+        "model": "gpt-4.1-nano",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "gpt-4o-mini-audio-preview",
+        "model": "gpt-4o-mini-audio-preview",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "openai-fast",
+        "model": "openai-fast",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "gpt-4.1",
+        "model": "gpt-4.1",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "openai-roblox",
+        "model": "openai-roblox",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "qwen-2.5-coder-32b",
+        "model": "qwen-2.5-coder-32b",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "bidara",
+        "model": "bidara",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": true,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "hypnosis-tracy",
+        "model": "hypnosis-tracy",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "midijourney",
+        "model": "midijourney",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "mirexa",
+        "model": "mirexa",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "rtist",
+        "model": "rtist",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "sur",
+        "model": "sur",
+        "video": false,
+        "vision": true
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "unity",
+        "model": "unity",
+        "video": false,
+        "vision": true
+      }
+    ]
+  },
+  {
+    "group": "Image Generation",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": true,
+        "label": "flux",
+        "model": "flux",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": true,
+        "label": "turbo",
+        "model": "turbo",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": true,
+        "label": "kontext",
+        "model": "kontext",
+        "video": false,
+        "vision": false
+      }
+    ]
+  },
+  {
+    "group": "Audio Generation",
+    "models": [
+      {
+        "audio": true,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "openai-audio",
+        "model": "openai-audio",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": true,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "hypnosis-tracy",
+        "model": "hypnosis-tracy",
+        "video": false,
+        "vision": false
+      }
+    ]
+  },
+  {
+    "group": "Audio Voices",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "alloy",
+        "model": "alloy",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "echo",
+        "model": "echo",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "fable",
+        "model": "fable",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "onyx",
+        "model": "onyx",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "nova",
+        "model": "nova",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "shimmer",
+        "model": "shimmer",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "coral",
+        "model": "coral",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "verse",
+        "model": "verse",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "ballad",
+        "model": "ballad",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "ash",
+        "model": "ash",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "sage",
+        "model": "sage",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "amuch",
+        "model": "amuch",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "dan",
+        "model": "dan",
+        "video": false,
+        "vision": false
+      }
+    ]
+  }
+]

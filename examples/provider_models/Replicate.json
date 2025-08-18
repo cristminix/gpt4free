@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "meta/meta-llama-3-70b-instruct",
+    "model": "meta/meta-llama-3-70b-instruct",
+    "video": false,
+    "vision": false
+  }
+]

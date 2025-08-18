@@ -1,0 +1,32 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "grok-3",
+    "model": "grok-3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-3-thinking",
+    "model": "grok-3-thinking",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-2",
+    "model": "grok-2",
+    "video": false,
+    "vision": false
+  }
+]

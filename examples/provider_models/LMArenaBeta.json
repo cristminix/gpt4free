@@ -1,0 +1,1002 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gpt-5-high",
+    "model": "gpt-5-high",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-5-chat",
+    "model": "gpt-5-chat",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-opus-4-20250514",
+    "model": "claude-opus-4-20250514",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.5-flash",
+    "model": "gemini-2.5-flash",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "o3-2025-04-16",
+    "model": "o3-2025-04-16",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "chatgpt-4o-latest-20250326",
+    "model": "chatgpt-4o-latest-20250326",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phantom-0725-1",
+    "model": "phantom-0725-1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "command-a-03-2025",
+    "model": "command-a-03-2025",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-4.1-mini-2025-04-14",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "amazon.nova-pro-v1:0",
+    "model": "amazon.nova-pro-v1:0",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "o3-mini",
+    "model": "o3-mini",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-3-mini-beta",
+    "model": "grok-3-mini-beta",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-r1-0528",
+    "model": "deepseek-r1-0528",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "o4-mini-2025-04-16",
+    "model": "o4-mini-2025-04-16",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.5-flash-lite-preview-06-17-thinking",
+    "model": "gemini-2.5-flash-lite-preview-06-17-thinking",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "amazon-nova-experimental-chat-05-14",
+    "model": "amazon-nova-experimental-chat-05-14",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-3-7-sonnet-20250219-thinking-32k",
+    "model": "claude-3-7-sonnet-20250219-thinking-32k",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-3-5-haiku-20241022",
+    "model": "claude-3-5-haiku-20241022",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-medium-2505",
+    "model": "mistral-medium-2505",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-v3-0324",
+    "model": "deepseek-v3-0324",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "velocilux",
+    "model": "velocilux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "dino",
+    "model": "dino",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "magistral-medium-2506",
+    "model": "magistral-medium-2506",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-maverick-17b-128e-instruct",
+    "model": "llama-4-maverick-17b-128e-instruct",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-30b-a3b",
+    "model": "qwen3-30b-a3b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stephen-v2",
+    "model": "stephen-v2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-235b-a22b",
+    "model": "qwen3-235b-a22b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.3-70b-instruct",
+    "model": "llama-3.3-70b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "cogitolux",
+    "model": "cogitolux",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "folsom-0805-1",
+    "model": "folsom-0805-1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-sonnet-4-20250514",
+    "model": "claude-sonnet-4-20250514",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "potato",
+    "model": "potato",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-3-7-sonnet-20250219",
+    "model": "claude-3-7-sonnet-20250219",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "minimax-m1",
+    "model": "minimax-m1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-30b-a3b-instruct-2507",
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-sonnet-4-20250514-thinking-32k",
+    "model": "claude-sonnet-4-20250514-thinking-32k",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-235b-a22b-no-thinking",
+    "model": "qwen3-235b-a22b-no-thinking",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3n-e4b-it",
+    "model": "gemma-3n-e4b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-opus-4-20250514-thinking-16k",
+    "model": "claude-opus-4-20250514-thinking-16k",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "stephen-vision-csfix",
+    "model": "stephen-vision-csfix",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "triangle",
+    "model": "triangle",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-small-2506",
+    "model": "mistral-small-2506",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-3-mini-high",
+    "model": "grok-3-mini-high",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-4-0709",
+    "model": "grok-4-0709",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glm-4.5",
+    "model": "glm-4.5",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-opus-4-1-20250805",
+    "model": "claude-opus-4-1-20250805",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Bailing-Lite-250220",
+    "model": "Bailing-Lite-250220",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-oss-20b",
+    "model": "gpt-oss-20b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "octopus",
+    "model": "octopus",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-235b-a22b-instruct-2507",
+    "model": "qwen3-235b-a22b-instruct-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-oss-120b",
+    "model": "gpt-oss-120b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "step-3",
+    "model": "step-3",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-coder-480b-a35b-instruct",
+    "model": "qwen3-coder-480b-a35b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glm-4.5-air",
+    "model": "glm-4.5-air",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nightride-on",
+    "model": "nightride-on",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "EB45-vision",
+    "model": "EB45-vision",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "folsom-072125-2",
+    "model": "folsom-072125-2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nightride-on-v2",
+    "model": "nightride-on-v2",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-235b-a22b-thinking-2507",
+    "model": "qwen3-235b-a22b-thinking-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-opus-4-1-20250805-thinking-16k",
+    "model": "claude-opus-4-1-20250805-thinking-16k",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "EB45-turbo",
+    "model": "EB45-turbo",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-5-mini-high",
+    "model": "gpt-5-mini-high",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glm-4.5v",
+    "model": "glm-4.5v",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "hunyuan-t1-20250711",
+    "model": "hunyuan-t1-20250711",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-5-nano-high",
+    "model": "gpt-5-nano-high",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "hunyuan-turbos-20250416",
+    "model": "hunyuan-turbos-20250416",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phantom-0728-1",
+    "model": "phantom-0728-1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phantom-0731-1",
+    "model": "phantom-0731-1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemini-2.0-flash-001",
+    "model": "gemini-2.0-flash-001",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "phantom-0731-2",
+    "model": "phantom-0731-2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-3-5-sonnet-20241022",
+    "model": "claude-3-5-sonnet-20241022",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "grok-3-preview-02-24",
+    "model": "grok-3-preview-02-24",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-scout-17b-16e-instruct",
+    "model": "llama-4-scout-17b-16e-instruct",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-maverick-03-26-experimental",
+    "model": "llama-4-maverick-03-26-experimental",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwq-32b",
+    "model": "qwq-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistral-small-3.1-24b-instruct-2503",
+    "model": "mistral-small-3.1-24b-instruct-2503",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-3-27b-it",
+    "model": "gemma-3-27b-it",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-4.1-2025-04-14",
+    "model": "gpt-4.1-2025-04-14",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-1-kontext-pro",
+    "model": "flux-1-kontext-pro",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "gpt-image-1",
+    "model": "gpt-image-1",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-1-kontext-max",
+    "model": "flux-1-kontext-max",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "imagen-3.0-generate-002",
+    "model": "imagen-3.0-generate-002",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ideogram-v2",
+    "model": "ideogram-v2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "photon",
+    "model": "photon",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "dall-e-3",
+    "model": "dall-e-3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "recraft-v3",
+    "model": "recraft-v3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "anonymous-bot-0514",
+    "model": "anonymous-bot-0514",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-1.1-pro",
+    "model": "flux-1.1-pro",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "ideogram-v3-quality",
+    "model": "ideogram-v3-quality",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "seedream-3",
+    "model": "seedream-3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "seededit-3.0",
+    "model": "seededit-3.0",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "imagen-4.0-ultra-generate-preview-06-06",
+    "model": "imagen-4.0-ultra-generate-preview-06-06",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "imagen-4.0-generate-preview-06-06",
+    "model": "imagen-4.0-generate-preview-06-06",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "hidream-e1.1",
+    "model": "hidream-e1.1",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "qwen-image",
+    "model": "qwen-image",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "nano-banana",
+    "model": "nano-banana",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flux-1-kontext-dev",
+    "model": "flux-1-kontext-dev",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "step1x-edit",
+    "model": "step1x-edit",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "gemini-2.0-flash-preview-image-generation",
+    "model": "gemini-2.0-flash-preview-image-generation",
+    "video": false,
+    "vision": true
+  }
+]

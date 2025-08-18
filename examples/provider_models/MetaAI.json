@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "meta-ai",
+    "model": "meta-ai",
+    "video": false,
+    "vision": false
+  }
+]

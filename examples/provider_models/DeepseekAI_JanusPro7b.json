@@ -1,0 +1,22 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "janus-pro-7b",
+    "model": "janus-pro-7b",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "janus-pro-7b-image",
+    "model": "janus-pro-7b-image",
+    "video": false,
+    "vision": false
+  }
+]

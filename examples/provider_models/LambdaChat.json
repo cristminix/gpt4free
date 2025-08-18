@@ -1,0 +1,152 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-llama3.3-70b",
+    "model": "deepseek-llama3.3-70b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "deepseek-r1",
+    "model": "deepseek-r1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-r1-0528",
+    "model": "deepseek-r1-0528",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "apriel-5b-instruct",
+    "model": "apriel-5b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "hermes-3-llama-3.1-405b-fp8",
+    "model": "hermes-3-llama-3.1-405b-fp8",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "hermes3-405b-fp8-128k",
+    "model": "hermes3-405b-fp8-128k",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3.1-nemotron-70b-instruct",
+    "model": "llama3.1-nemotron-70b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "lfm-40b",
+    "model": "lfm-40b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3.3-70b-instruct-fp8",
+    "model": "llama3.3-70b-instruct-fp8",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen25-coder-32b-instruct",
+    "model": "qwen25-coder-32b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-v3-0324",
+    "model": "deepseek-v3-0324",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-maverick-17b-128e-instruct-fp8",
+    "model": "llama-4-maverick-17b-128e-instruct-fp8",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-4-scout-17b-16e-instruct",
+    "model": "llama-4-scout-17b-16e-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3.3-70b-instruct-fp8",
+    "model": "llama3.3-70b-instruct-fp8",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-32b-fp8",
+    "model": "qwen3-32b-fp8",
+    "video": false,
+    "vision": false
+  }
+]

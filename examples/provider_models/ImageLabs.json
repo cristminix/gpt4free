@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": true,
+    "label": "sdxl-turbo",
+    "model": "sdxl-turbo",
+    "video": false,
+    "vision": false
+  }
+]

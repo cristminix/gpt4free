@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "phi-4-multimodal",
+    "model": "phi-4-multimodal",
+    "video": false,
+    "vision": true
+  }
+]

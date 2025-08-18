@@ -1,0 +1,522 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "openai/gpt-oss-120b",
+    "model": "openai/gpt-oss-120b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "openai/gpt-oss-20b",
+    "model": "openai/gpt-oss-20b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-4B-Thinking-2507",
+    "model": "Qwen/Qwen3-4B-Thinking-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-4B-Instruct-2507",
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "zai-org/GLM-4.5",
+    "model": "zai-org/GLM-4.5",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "zai-org/GLM-4.5-Air",
+    "model": "zai-org/GLM-4.5-Air",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "moonshotai/Kimi-K2-Instruct",
+    "model": "moonshotai/Kimi-K2-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-ai/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.1-8B-Instruct",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-8B",
+    "model": "Qwen/Qwen3-8B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "model": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "HuggingFaceTB/SmolLM3-3B",
+    "model": "HuggingFaceTB/SmolLM3-3B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-4B",
+    "model": "Qwen/Qwen3-4B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-32B",
+    "model": "Qwen/Qwen3-32B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistralai/Mistral-7B-Instruct-v0.2",
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen2.5-7B-Instruct",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.1-8B",
+    "model": "meta-llama/Llama-3.1-8B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-ai/DeepSeek-V3",
+    "model": "deepseek-ai/DeepSeek-V3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-ai/DeepSeek-R1-0528",
+    "model": "deepseek-ai/DeepSeek-R1-0528",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "dphn/Dolphin-Mistral-24B-Venice-Edition",
+    "model": "dphn/Dolphin-Mistral-24B-Venice-Edition",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.2-3B-Instruct",
+    "model": "meta-llama/Llama-3.2-3B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-30B-A3B",
+    "model": "Qwen/Qwen3-30B-A3B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+    "model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Meta-Llama-3-8B",
+    "model": "meta-llama/Meta-Llama-3-8B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen3-14B",
+    "model": "Qwen/Qwen3-14B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen2-VL-7B-Instruct",
+    "model": "Qwen/Qwen2-VL-7B-Instruct",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.3-70B-Instruct",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "CohereForAI/c4ai-command-r-plus-08-2024",
+    "model": "CohereForAI/c4ai-command-r-plus-08-2024",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/QwQ-32B",
+    "model": "Qwen/QwQ-32B",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "model": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+    "video": false,
+    "vision": true
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mistralai/Mistral-Nemo-Instruct-2407",
+    "model": "mistralai/Mistral-Nemo-Instruct-2407",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "microsoft/Phi-3.5-mini-instruct",
+    "model": "microsoft/Phi-3.5-mini-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-dev",
+    "model": "black-forest-labs/FLUX.1-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-schnell",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "Qwen/Qwen-Image",
+    "model": "Qwen/Qwen-Image",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "black-forest-labs/FLUX.1-Krea-dev",
+    "model": "black-forest-labs/FLUX.1-Krea-dev",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "lightx2v/Qwen-Image-Lightning",
+    "model": "lightx2v/Qwen-Image-Lightning",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "city96/Qwen-Image-gguf",
+    "model": "city96/Qwen-Image-gguf",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "lodestones/Chroma1-HD",
+    "model": "lodestones/Chroma1-HD",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "flymy-ai/qwen-image-realism-lora",
+    "model": "flymy-ai/qwen-image-realism-lora",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "QuantStack/Qwen-Image-Distill-GGUF",
+    "model": "QuantStack/Qwen-Image-Distill-GGUF",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "QuantStack/FLUX.1-Krea-dev-GGUF",
+    "model": "QuantStack/FLUX.1-Krea-dev-GGUF",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": true,
+    "label": "nunchaku-tech/nunchaku-flux.1-krea-dev",
+    "model": "nunchaku-tech/nunchaku-flux.1-krea-dev",
+    "video": false,
+    "vision": false
+  }
+]

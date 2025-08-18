@@ -1,0 +1,182 @@
+[
+  {
+    "group": "Styles",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "friendly",
+        "model": "friendly",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "patient_teacher",
+        "model": "patient_teacher",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "noir_detective",
+        "model": "noir_detective",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "cowboy",
+        "model": "cowboy",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "calm",
+        "model": "calm",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "scientific_style",
+        "model": "scientific_style",
+        "video": false,
+        "vision": false
+      }
+    ]
+  },
+  {
+    "group": "Voices",
+    "models": [
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "alloy",
+        "model": "alloy",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "ash",
+        "model": "ash",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "ballad",
+        "model": "ballad",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": true,
+        "image": false,
+        "label": "coral",
+        "model": "coral",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "echo",
+        "model": "echo",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "fable",
+        "model": "fable",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "onyx",
+        "model": "onyx",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "nova",
+        "model": "nova",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "sage",
+        "model": "sage",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "shimmer",
+        "model": "shimmer",
+        "video": false,
+        "vision": false
+      },
+      {
+        "audio": false,
+        "count": null,
+        "default": false,
+        "image": false,
+        "label": "verse",
+        "model": "verse",
+        "video": false,
+        "vision": false
+      }
+    ]
+  }
+]

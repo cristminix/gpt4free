@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "kimi-k2",
+    "model": "kimi-k2",
+    "video": false,
+    "vision": false
+  }
+]

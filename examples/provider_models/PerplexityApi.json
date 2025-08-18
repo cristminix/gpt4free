@@ -1,0 +1,62 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3-sonar-small-32k-chat",
+    "model": "llama-3-sonar-small-32k-chat",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "llama-3-sonar-large-32k-online",
+    "model": "llama-3-sonar-large-32k-online",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3-sonar-large-32k-chat",
+    "model": "llama-3-sonar-large-32k-chat",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "llama-3-sonar-large-32k-online",
+    "model": "llama-3-sonar-large-32k-online",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3-8b-instruct",
+    "model": "llama-3-8b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3-70b-instruct",
+    "model": "llama-3-70b-instruct",
+    "video": false,
+    "vision": false
+  }
+]

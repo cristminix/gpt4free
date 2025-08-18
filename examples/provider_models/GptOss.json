@@ -1,0 +1,22 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gpt-oss-120b",
+    "model": "gpt-oss-120b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-oss-20b",
+    "model": "gpt-oss-20b",
+    "video": false,
+    "vision": false
+  }
+]

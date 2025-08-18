@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gpt-4.1-mini",
+    "model": "gpt-4.1-mini",
+    "video": false,
+    "vision": true
+  }
+]

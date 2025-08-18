@@ -1,0 +1,42 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "llama3.1-70b",
+    "model": "llama3.1-70b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3.1-8b",
+    "model": "llama3.1-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.3-70b",
+    "model": "llama-3.3-70b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "deepseek-r1-distill-llama-70b",
+    "model": "deepseek-r1-distill-llama-70b",
+    "video": false,
+    "vision": false
+  }
+]

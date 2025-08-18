@@ -1,0 +1,142 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "qwen3-235b-a22b",
+    "model": "qwen3-235b-a22b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-coder-plus",
+    "model": "qwen3-coder-plus",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-30b-a3b",
+    "model": "qwen3-30b-a3b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen3-coder-30b-a3b-instruct",
+    "model": "qwen3-coder-30b-a3b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-max-latest",
+    "model": "qwen-max-latest",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-plus-2025-01-25",
+    "model": "qwen-plus-2025-01-25",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwq-32b",
+    "model": "qwq-32b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-turbo-2025-02-11",
+    "model": "qwen-turbo-2025-02-11",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen2.5-omni-7b",
+    "model": "qwen2.5-omni-7b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qvq-72b-preview-0310",
+    "model": "qvq-72b-preview-0310",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen2.5-vl-32b-instruct",
+    "model": "qwen2.5-vl-32b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen2.5-14b-instruct-1m",
+    "model": "qwen2.5-14b-instruct-1m",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen2.5-coder-32b-instruct",
+    "model": "qwen2.5-coder-32b-instruct",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen2.5-72b-instruct",
+    "model": "qwen2.5-72b-instruct",
+    "video": false,
+    "vision": false
+  }
+]

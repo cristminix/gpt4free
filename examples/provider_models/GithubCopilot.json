@@ -1,0 +1,42 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "gpt-4o",
+    "model": "gpt-4o",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "o1-mini",
+    "model": "o1-mini",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "o1-preview",
+    "model": "o1-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-3.5-sonnet",
+    "model": "claude-3.5-sonnet",
+    "video": false,
+    "vision": false
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": true,
+    "label": "aria",
+    "model": "aria",
+    "video": false,
+    "vision": true
+  }
+]

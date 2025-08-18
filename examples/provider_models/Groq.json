@@ -1,0 +1,182 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "distil-whisper-large-v3-en",
+    "model": "distil-whisper-large-v3-en",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma2-9b-it",
+    "model": "gemma2-9b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gemma-7b-it",
+    "model": "gemma-7b-it",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3-groq-70b-8192-tool-use-preview",
+    "model": "llama3-groq-70b-8192-tool-use-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3-groq-8b-8192-tool-use-preview",
+    "model": "llama3-groq-8b-8192-tool-use-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.1-70b-versatile",
+    "model": "llama-3.1-70b-versatile",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.1-8b-instant",
+    "model": "llama-3.1-8b-instant",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-1b-preview",
+    "model": "llama-3.2-1b-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-3b-preview",
+    "model": "llama-3.2-3b-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-11b-vision-preview",
+    "model": "llama-3.2-11b-vision-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-3.2-90b-vision-preview",
+    "model": "llama-3.2-90b-vision-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama-guard-3-8b",
+    "model": "llama-guard-3-8b",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llava-v1.5-7b-4096-preview",
+    "model": "llava-v1.5-7b-4096-preview",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3-70b-8192",
+    "model": "llama3-70b-8192",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "llama3-8b-8192",
+    "model": "llama3-8b-8192",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "mixtral-8x7b-32768",
+    "model": "mixtral-8x7b-32768",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "whisper-large-v3",
+    "model": "whisper-large-v3",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "whisper-large-v3-turbo",
+    "model": "whisper-large-v3-turbo",
+    "video": false,
+    "vision": false
+  }
+]

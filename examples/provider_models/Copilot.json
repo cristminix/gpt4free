@@ -1,0 +1,32 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "Copilot",
+    "model": "Copilot",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Think Deeper",
+    "model": "Think Deeper",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "Smart (GPT-5)",
+    "model": "Smart (GPT-5)",
+    "video": false,
+    "vision": false
+  }
+]

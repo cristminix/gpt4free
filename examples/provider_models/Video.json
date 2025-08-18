@@ -1,0 +1,22 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "search",
+    "model": "search",
+    "video": true,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sora",
+    "model": "sora",
+    "video": true,
+    "vision": false
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "qwen-2.5-max",
+    "model": "qwen-2.5-max",
+    "video": false,
+    "vision": false
+  }
+]

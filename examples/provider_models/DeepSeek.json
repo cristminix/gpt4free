@@ -1,0 +1,12 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "deepseek-chat",
+    "model": "deepseek-chat",
+    "video": false,
+    "vision": false
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": true,
+    "image": false,
+    "label": "r1-1776",
+    "model": "r1-1776",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sonar-pro",
+    "model": "sonar-pro",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sonar",
+    "model": "sonar",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sonar-reasoning",
+    "model": "sonar-reasoning",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "sonar-reasoning-pro",
+    "model": "sonar-reasoning-pro",
+    "video": false,
+    "vision": false
+  }
+]

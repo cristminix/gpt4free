@@ -1,4 +1,5 @@
 from examples.solids.extended.providers.lmarenabeta.conversation_json import ConversationJson
+from examples.solids.extended.providers.lmarenabeta.data_builder_auto import build_evaluation_data_auto
 from g4f.Provider.needs_auth import LMArenaBeta
 from g4f.typing import AsyncResult, Messages, MediaListType
 from g4f.requests import StreamSession, get_args_from_nodriver, raise_for_status, merge_cookies, has_nodriver
@@ -6,7 +7,6 @@ from g4f.errors import ModelNotFoundError, CloudflareError, MissingAuthError
 from g4f.providers.response import FinishReason, Usage, JsonConversation, ImageResponse
 from g4f.Provider.helper import get_last_user_message
 from g4f import debug
-from .lmarenabeta.data_builder import build_evaluation_data
 import os
 import asyncio
 import uuid
@@ -28,11 +28,11 @@ class ExtendedLMArenaBeta(LMArenaBeta):
     is_extended=True
     
     # Add any additional class attributes or methods here
-    def __init__(self):
-        super().__init__()
+    # def __init__(self):
+    #     super().__init__()
         # Initialize any additional attributes
     @classmethod
-    def get_models(cls) -> list[str]:
+    def get_models_(cls) -> list[str]:
         if not cls._models_loaded and has_curl_cffi:
             # Define cache file path
             cache_file_path = os.path.join(os.path.dirname(__file__), "lmarena_models_cache.json")
@@ -102,10 +102,8 @@ class ExtendedLMArenaBeta(LMArenaBeta):
         **kwargs
     ) -> AsyncResult:
         debug.log(f"conversation {conversation.get_dict() if conversation else 'None'}")
-        use_conversation_json=False
-        # if hasattr(conversation,"id"):
-        #     conversation_json = ConversationJson(conversation.id)
-        #     use_conversation_json=True
+        # use_conversation_json=False
+         
 
         if cls.share_url is None:
             cls.share_url = os.getenv("G4F_SHARE_URL")
@@ -194,7 +192,9 @@ class ExtendedLMArenaBeta(LMArenaBeta):
             userMessageId = str(uuid.uuid4())
             modelAMessageId = str(uuid.uuid4())
             evaluationSessionId = str(uuid.uuid4())
-            data = build_evaluation_data(
+            # conversation_json = ConversationJson(evaluationSessionId)
+            # use_conversation_json=True
+            data = build_evaluation_data_auto(
                 model_id=model_id,
                 prompt=prompt,
                 userMessageId=userMessageId,
@@ -211,9 +211,9 @@ class ExtendedLMArenaBeta(LMArenaBeta):
                     # {cls.api_post_endpoint}/{evaluationSessionId}
                     api_endoint = cls.api_endpoint
                     # if use_conversation_json:
-                    #     if conversation_json.get("continueConversation") == "yes":
-                    #         evaluationSessionId=conversation_json.get("evaluationSessionId")
-                    #         api_endoint = f"{cls.api_post_endpoint}/{evaluationSessionId}"
+                        # if conversation_json.get("continueConversation") == "yes":
+                        #     evaluationSessionId=conversation_json.get("evaluationSessionId")
+                        #     api_endoint = f"{cls.api_post_endpoint}/{evaluationSessionId}"
                     async with session.post(
                         api_endoint,
                         json=data,

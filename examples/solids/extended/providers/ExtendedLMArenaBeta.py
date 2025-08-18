@@ -1,6 +1,7 @@
 from examples.solids.extended.providers.lmarenabeta.conversation_json import ConversationJson
 from examples.solids.extended.providers.lmarenabeta.data_builder_auto import build_evaluation_data_auto
 from g4f.Provider.needs_auth import LMArenaBeta
+from g4f.tools.media import merge_media
 from g4f.typing import AsyncResult, Messages, MediaListType
 from g4f.requests import StreamSession, get_args_from_nodriver, raise_for_status, merge_cookies, has_nodriver
 from g4f.errors import ModelNotFoundError, CloudflareError, MissingAuthError
@@ -194,17 +195,64 @@ class ExtendedLMArenaBeta(LMArenaBeta):
             evaluationSessionId = str(uuid.uuid4())
             # conversation_json = ConversationJson(evaluationSessionId)
             # use_conversation_json=True
-            data = build_evaluation_data_auto(
-                model_id=model_id,
-                prompt=prompt,
-                userMessageId=userMessageId,
-                modelAMessageId=modelAMessageId,
-                evaluationSessionId=evaluationSessionId,
-                media=media,
-                source_messages=messages,
-                conversation=conversation,
-                is_image_model=is_image_model
-            )
+            if not is_image_model:
+                data = build_evaluation_data_auto(
+                    model_id=model_id,
+                    prompt=prompt,
+                    userMessageId=userMessageId,
+                    modelAMessageId=modelAMessageId,
+                    evaluationSessionId=evaluationSessionId,
+                    media=media,
+                    source_messages=messages,
+                    conversation=conversation,
+                    is_image_model=is_image_model
+                )
+            else:
+                experimental_attachments = []
+                if media and messages:
+                    for url, name in list(merge_media(media, messages)):
+                        if isinstance(url, str) and url.startswith("https://"):
+                            experimental_attachments.append({
+                                "name": name or os.path.basename(url) if name is None else name,
+                                "contentType": get_content_type(url),
+                                "url": url
+                            })
+                parentMessageIds=[]
+                messages = [
+                    {
+                        "id": userMessageId,
+                        "role": "user",
+                        "content": prompt,
+                        "experimental_attachments": experimental_attachments,
+                        "parentMessageIds": [],
+                        "participantPosition": "a",
+                        "modelId": None,
+                        "evaluationSessionId": evaluationSessionId,
+                        "status": "pending",
+                        "failureReason": None
+                    },
+                    {
+                        "id": modelAMessageId,
+                        "role": "assistant",
+                        "content": "",
+                        "experimental_attachments": [],
+                        "parentMessageIds": [userMessageId],
+                        "participantPosition": "a",
+                        "modelId": model_id,
+                        "evaluationSessionId": evaluationSessionId,
+                        "status": "pending",
+                        "failureReason": None
+                    }
+                ]
+                data = {
+                    "id": evaluationSessionId,
+                    "mode": "direct",
+                    "modelAId": model_id,
+                    "userMessageId": userMessageId,
+                    "modelAMessageId": modelAMessageId,
+                    "messages": messages,
+                    "modality": "image" if is_image_model else "chat"
+                }
             # exit()
             try:
                 async with StreamSession(**args, timeout=timeout) as session:

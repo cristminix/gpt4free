@@ -1,0 +1,92 @@
+{
+  "id": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+  "mode": "direct",
+  "modelAId": "ee116d12-64d6-48a8-88e5-b2d06325cdd2",
+  "userMessageId": "392f90df-b565-40dd-85ce-6686500d6ae9",
+  "modelAMessageId": "1835d1c3-3258-4d1b-912c-541966330278",
+  "messages": [
+    {
+      "id": "1231f903-f3dd-4782-9ede-a74b2b7f84a3",
+      "role": "user",
+      "content": "hi",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "61565627-15fb-4ad4-97fe-2e534f4341c7",
+      "role": "assistant",
+      "content": "Hello! How can I help you today?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "1231f903-f3dd-4782-9ede-a74b2b7f84a3"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "06f36d50-c9e3-4346-9a2c-c447af67acdf",
+      "role": "user",
+      "content": "mengapa bumi bulat?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "61565627-15fb-4ad4-97fe-2e534f4341c7"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "a25e2d6f-2d30-4758-aea7-2055137e1e6c",
+      "role": "assistant",
+      "content": "Bumi berbentuk bulat (lebih tepatnya sedikit pepat di kutub) karena beberapa alasan fisika fundamental:\n\n**Gravitasi dan pembentukan planet**: Ketika Bumi terbentuk sekitar 4,5 miliar tahun lalu dari debu dan gas di tata surya awal, gravitasi menarik materi dari segala arah menuju pusat massa. Gaya gravitasi bekerja sama ke segala arah, sehingga materi cenderung membentuk bola - ini adalah bentuk yang paling efisien untuk meminimalkan energi potensial gravitasi.\n\n**Tekanan hidrostatik**: Saat planet tumbuh cukup besar, beratnya sendiri menciptakan tekanan yang sangat besar di bagian dalam. Tekanan ini menyebabkan batuan menjadi plastis (dapat berubah bentuk), dan gravitasi membentuknya menjadi bola. Proses ini disebut kesetimbangan hidrostatik.\n\n**Rotasi Bumi**: Sebenarnya Bumi tidak bulat sempurna - rotasinya menyebabkan sedikit penonjolan di khatulistiwa karena gaya sentrifugal. Jadi Bumi berbentuk \"oblate spheroid\" - sedikit pepat di kutub dan mengembung di khatulistiwa. Diameter khatulistiwa sekitar 43 km lebih besar dari diameter kutub.\n\nBentuk bulat ini adalah hasil alami dari hukum fisika yang bekerja pada objek masif di ruang angkasa. Semua planet dan bintang yang cukup besar memiliki bentuk serupa karena alasan yang sama.",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "06f36d50-c9e3-4346-9a2c-c447af67acdf"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "392f90df-b565-40dd-85ce-6686500d6ae9",
+      "role": "user",
+      "content": "siapa penemu teori tentang itu?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "a25e2d6f-2d30-4758-aea7-2055137e1e6c"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "1835d1c3-3258-4d1b-912c-541966330278",
+      "role": "assistant",
+      "content": "",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "392f90df-b565-40dd-85ce-6686500d6ae9"
+      ],
+      "participantPosition": "a",
+      "modelId": "ee116d12-64d6-48a8-88e5-b2d06325cdd2",
+      "evaluationSessionId": "64b4ea5d-7f9f-4484-b307-1bd8fe032730",
+      "status": "pending",
+      "failureReason": null
+    }
+  ],
+  "modality": "chat"
+}

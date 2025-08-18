@@ -1,0 +1,76 @@
+{
+  "id": "fa46a59e-74ef-4d17-97d4-112001dab863",
+  "mode": "direct",
+  "modelAId": "14e9311c-94d2-40c2-8c54-273947e208b0",
+  "userMessageId": "8cca7c72-85d0-4d16-a0ea-3eac0aeed8b8",
+  "modelAMessageId": "81ecd7f6-2fb1-4130-85a4-445fba18b6a4",
+  "messages": [
+    {
+      "id": "9cc70182-0081-4c0a-81b9-42d80f48f4b7",
+      "role": "system",
+      "content": "use indonesian in casual",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "fa46a59e-74ef-4d17-97d4-112001dab863",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "50626809-aae6-4c77-ba3a-a53817ffb3b0",
+      "role": "user",
+      "content": "What is the capital of france?",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "fa46a59e-74ef-4d17-97d4-112001dab863",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "d603edcd-35ae-44ba-a9c9-4150e6b33982",
+      "role": "assistant",
+      "content": "Ibukota Prancis adalah Paris.",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "50626809-aae6-4c77-ba3a-a53817ffb3b0"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "fa46a59e-74ef-4d17-97d4-112001dab863",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "8cca7c72-85d0-4d16-a0ea-3eac0aeed8b8",
+      "role": "user",
+      "content": "What is the best place on there ?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "d603edcd-35ae-44ba-a9c9-4150e6b33982"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "fa46a59e-74ef-4d17-97d4-112001dab863",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "81ecd7f6-2fb1-4130-85a4-445fba18b6a4",
+      "role": "assistant",
+      "content": "",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "8cca7c72-85d0-4d16-a0ea-3eac0aeed8b8"
+      ],
+      "participantPosition": "a",
+      "modelId": "14e9311c-94d2-40c2-8c54-273947e208b0",
+      "evaluationSessionId": "fa46a59e-74ef-4d17-97d4-112001dab863",
+      "status": "pending",
+      "failureReason": null
+    }
+  ],
+  "modality": "chat"
+}

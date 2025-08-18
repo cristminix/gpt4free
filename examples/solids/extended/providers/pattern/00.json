@@ -1,0 +1,34 @@
+{
+  "id": "b469180b-0fc5-4464-ba54-ba831c573164",
+  "mode": "direct",
+  "modelAId": "be98fcfd-345c-4ae1-9a82-a19123ebf1d2",
+  "userMessageId": "52b5962d-9d48-4abc-95b0-a0df09dfb0d4",
+  "modelAMessageId": "f6f145f6-7404-4661-9ee0-563072c4bffb",
+  "messages": [
+    {
+      "id": "52b5962d-9d48-4abc-95b0-a0df09dfb0d4",
+      "role": "user",
+      "content": "hi",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "b469180b-0fc5-4464-ba54-ba831c573164",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "f6f145f6-7404-4661-9ee0-563072c4bffb",
+      "role": "assistant",
+      "content": "",
+      "experimental_attachments": [],
+      "parentMessageIds": ["52b5962d-9d48-4abc-95b0-a0df09dfb0d4"],
+      "participantPosition": "a",
+      "modelId": "be98fcfd-345c-4ae1-9a82-a19123ebf1d2",
+      "evaluationSessionId": "b469180b-0fc5-4464-ba54-ba831c573164",
+      "status": "pending",
+      "failureReason": null
+    }
+  ],
+  "modality": "chat"
+}

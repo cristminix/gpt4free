@@ -1,0 +1,64 @@
+{
+  "id": "1c34953f-5c7f-4ebb-bc04-d9f16ddc3be4",
+  "mode": "direct",
+  "modelAId": "ee116d12-64d6-48a8-88e5-b2d06325cdd2",
+  "userMessageId": "fe91ee0b-fec0-4635-9945-1f7da4748544",
+  "modelAMessageId": "60a8096f-b04f-455f-af68-951b7fdb13ae",
+  "messages": [
+    {
+      "id": "d44bffd0-dacc-4f2a-ad06-f859634f4e1d",
+      "role": "user",
+      "content": "hi",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1c34953f-5c7f-4ebb-bc04-d9f16ddc3be4",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "d85a8b2f-eae5-404a-89ae-3bfb15282359",
+      "role": "assistant",
+      "content": "Hello! How can I help you today?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "d44bffd0-dacc-4f2a-ad06-f859634f4e1d"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1c34953f-5c7f-4ebb-bc04-d9f16ddc3be4",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "fe91ee0b-fec0-4635-9945-1f7da4748544",
+      "role": "user",
+      "content": "mengapa bumi bulat?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "d85a8b2f-eae5-404a-89ae-3bfb15282359"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1c34953f-5c7f-4ebb-bc04-d9f16ddc3be4",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "60a8096f-b04f-455f-af68-951b7fdb13ae",
+      "role": "assistant",
+      "content": "",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "fe91ee0b-fec0-4635-9945-1f7da4748544"
+      ],
+      "participantPosition": "a",
+      "modelId": "ee116d12-64d6-48a8-88e5-b2d06325cdd2",
+      "evaluationSessionId": "1c34953f-5c7f-4ebb-bc04-d9f16ddc3be4",
+      "status": "pending",
+      "failureReason": null
+    }
+  ],
+  "modality": "chat"
+}

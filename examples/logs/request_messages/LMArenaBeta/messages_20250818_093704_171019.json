@@ -1,0 +1,76 @@
+{
+  "id": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+  "mode": "direct",
+  "modelAId": "14e9311c-94d2-40c2-8c54-273947e208b0",
+  "userMessageId": "a8307d7d-b0be-487f-9a63-65244b1b281b",
+  "modelAMessageId": "f1b70fd4-1f36-4ef1-9f3b-ab82dd60deda",
+  "messages": [
+    {
+      "id": "e589bcf8-5c1b-4a9d-a1d3-1233944ca379",
+      "role": "system",
+      "content": "use indonesian in casual",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "c8b112dd-147c-4f6c-974a-7c1ceb1d781c",
+      "role": "user",
+      "content": "What is the capital of france?",
+      "experimental_attachments": [],
+      "parentMessageIds": [],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "522d4fdf-ed92-4fe9-b055-770b62d37a4d",
+      "role": "assistant",
+      "content": "Ibukota Prancis adalah Paris.",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "c8b112dd-147c-4f6c-974a-7c1ceb1d781c"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+      "status": "success",
+      "failureReason": null
+    },
+    {
+      "id": "a8307d7d-b0be-487f-9a63-65244b1b281b",
+      "role": "user",
+      "content": "What is the best place on there ?",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "522d4fdf-ed92-4fe9-b055-770b62d37a4d"
+      ],
+      "participantPosition": "a",
+      "modelId": null,
+      "evaluationSessionId": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+      "status": "pending",
+      "failureReason": null
+    },
+    {
+      "id": "f1b70fd4-1f36-4ef1-9f3b-ab82dd60deda",
+      "role": "assistant",
+      "content": "",
+      "experimental_attachments": [],
+      "parentMessageIds": [
+        "a8307d7d-b0be-487f-9a63-65244b1b281b"
+      ],
+      "participantPosition": "a",
+      "modelId": "14e9311c-94d2-40c2-8c54-273947e208b0",
+      "evaluationSessionId": "1aa44813-3dfd-43b5-90ef-bb8f551122e1",
+      "status": "pending",
+      "failureReason": null
+    }
+  ],
+  "modality": "chat"
+}

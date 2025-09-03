@@ -13,6 +13,10 @@ from email.utils import formatdate
 from urllib.parse import quote_plus
 from typing import Optional
 
+from g4f import debug
+
+debug.enable_logging()
+
 try:
     from typing import Annotated
 except ImportError:
@@ -191,6 +195,7 @@ def get_timestamp(str):
         return 0
 
 async def get_media(filename, request: Request, thumbnail: bool = False):
+    debug.log(f"GET media {filename}")
     from g4f.image.copy_images import get_media_dir
     
     target = os.path.join(get_media_dir(), os.path.basename(filename))

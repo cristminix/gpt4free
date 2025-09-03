@@ -30,16 +30,16 @@ async def main():
     ]
     # messages = [{"role": "user", "content": "How are you"}]
     
-    print("Using extended LMArenaBeta provider:")
+    print("Using extended LMArenaBeta providers:")
     # try:
     response = []
-    conversation = JsonConversation(id="7334f730-7a87-11f0-bf6d-056a2bfe5dfd")
+    conversation = JsonConversation(id="7334f730-7a87-11f0-bf6d-056a2bfe5df2")
     async for chunk in ExtendedChatCompletion.create_async(
         model= "gpt-4.1-2025-04-14",
         messages= messages,
         provider= "LMArenaBeta",
         stream=True,
-        conversation=None
+        conversation=conversation
     ):
         if isinstance(chunk, str):
             response.append(chunk)

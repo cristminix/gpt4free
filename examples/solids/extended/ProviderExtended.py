@@ -20,6 +20,7 @@ from examples.solids.extended.providers import ExtendedLMArenaBeta, ExtendedPoll
 # This ensures that when importing with 'from ProviderExtended import *',
 # the extended versions are available with their original names
 LMArenaBeta = ExtendedLMArenaBeta
+LMArena = ExtendedLMArenaBeta
 PollinationsAI = ExtendedPollinationsAI
 Blackbox = ExtendedBlackbox
 
@@ -32,6 +33,7 @@ class ProviderUtils(BaseProviderUtils):
     convert = BaseProviderUtils.convert.copy()
     convert.update({
         "LMArenaBeta": ExtendedLMArenaBeta,
+        "LMArena": ExtendedLMArenaBeta,
         "PollinationsAI": ExtendedPollinationsAI,
         "Blackbox": ExtendedBlackbox
     })

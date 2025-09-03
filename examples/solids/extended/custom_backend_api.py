@@ -174,7 +174,7 @@ class CustomBackend_Api(CustomApi):
                 json_data = request.data
             try:
                 json_data = json.loads(json_data)
-                debug.log(f"request json_data is {json_data}")
+                # debug.log(f"request json_data is {json_data}")
             except json.JSONDecodeError as e:
                 logger.exception(e)
                 return jsonify({"error": {"message": "Invalid JSON data"}}), 400
@@ -285,19 +285,29 @@ class CustomBackend_Api(CustomApi):
                 'function': self.handle_synthesize,
                 'methods': ['GET']
             },
-            '/images/<path:name>': {
-                'function': self.serve_images,
-                'methods': ['GET']
-            },
-            '/media/<path:name>': {
-                'function': self.serve_images,
-                'methods': ['GET']
-            },
-            '/thumbnail/<path:name>': {
-                'function': self.serve_images,
-                'methods': ['GET']
-            },
+            # '/images/<path:name>': {
+            #     'function': self.serve_images_2,
+            #     'methods': ['GET']
+            # },
+            # '/media/<path:name>': {
+            #     'function': self.serve_images_2,
+            #     'methods': ['GET']
+            # },
+            # '/thumbnail/<path:name>': {
+            #     'function': self.serve_images_2,
+            #     'methods': ['GET']
+            # },
         }
+        # @app.route('/backend-api/media', methods=['GET'])
+        @app.route('/media/<path:name>', methods=['GET'])
+        @app.route('/images/<path:name>', methods=['GET'])
+        @app.route('/thumbnail/<path:name>', methods=['GET'])
+        def serve_media(name):
+            path=os.path.abspath(get_media_dir())
+            return send_from_directory(path, name)
+            # resp = jsonify({"name": name,"path":path})
+            # resp.status_code = 200
+            # return resp
 
         @app.route('/backend-api/v2/version', methods=['GET'])
         def version():

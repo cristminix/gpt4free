@@ -22,9 +22,14 @@ def run_gui(host: str = '0.0.0.0', port: int = 8080, debug: bool = False, demo: 
     from flask import Flask
     from g4f.gui.server.app import create_app
     from g4f.gui.server.website import Website
+    from g4f import debug as g4f_debug
     
     # Import our custom backend API
     from examples.solids.extended.custom_backend_api import CustomBackend_Api
+    
+    # Enable debug logging if debug mode is enabled
+    if debug:
+        g4f_debug.enable_logging()
     
     def get_custom_gui_app(demo: bool = False, timeout: int = None):
         """

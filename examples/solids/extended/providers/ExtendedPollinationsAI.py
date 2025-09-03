@@ -33,30 +33,6 @@ def transform_messages(messages):
     system_message = None
     
     for message in messages:
-        # Tangani pesan system
-        # if message['role'] == 'system':
-        #     if isinstance(message['content'], list):
-        #         # Gabungkan semua konten teks untuk pesan system
-        #         system_content = '\n'.join([
-        #             item['text'] for item in message['content']
-        #             if item['type'] == 'text'
-        #         ])
-        #         
-        #         # Buat atau update pesan system
-        #         if system_message is None:
-        #             system_message = {
-        #                 'role': 'system',
-        #                 'content': system_content
-        #             }
-        #         else:
-        #             system_message['content'] += f"\n{system_content}"
-        #     else:
-        #         # Jika sudah string, langsung gunakan
-        #         if system_message is None:
-        #             system_message = message
-        
-        # Tangani pesan user
-        # if message['role'] == 'user' or message['role'] == 'system':
         if isinstance(message['content'], list):
             # Buat objek terpisah untuk setiap konten teks
             for item in message['content']:
@@ -72,26 +48,12 @@ def transform_messages(messages):
                 'content': message['content']
             })
     
-    # Tambahkan pesan system di awal jika ada
-    # if system_message:
-    #     transformed_messages.insert(0, system_message)
-    
     return transformed_messages
 
 class ExtendedPollinationsAI(PollinationsAI):
     """Extended PollinationsAI provider with additional functionality"""
     
-    # Inherit class attributes from the parent class
-    # working = True
-    # supports_stream = True
     is_extended=True
-    
-    # # Explicitly define needs_auth attribute to avoid AttributeError
-    # needs_auth = False  # or True if the provider requires authentication
-    
-    # # Explicitly define create_function attribute to avoid AttributeError
-    # create_function = PollinationsAI.create_function
-    # async_create_function = PollinationsAI.async_create_function
     
     @classmethod
     async def create_async_generator(
@@ -230,25 +192,3 @@ class ExtendedPollinationsAI(PollinationsAI):
             ):
                 yield result
 
-# Define needs_auth as a module-level attribute to ensure it's available
-# when the module is accessed directly
-# needs_auth = ExtendedPollinationsAI.needs_auth
-
-# # Define create_function and async_create_function as module-level attributes
-# create_function = ExtendedPollinationsAI.create_function
-# async_create_function = ExtendedPollinationsAI.async_create_function
-
-# # Define working as a module-level attribute to ensure it's available
-# # when the module is accessed directly
-# working = ExtendedPollinationsAI.working
-# supports_stream = ExtendedPollinationsAI.supports_stream
-
-# # Define get_dict as a module-level attribute to ensure it's available
-# # when the module is accessed directly
-# def get_dict():
-#     return ExtendedPollinationsAI.get_dict()
-
-# # Also define other attributes that might be accessed directly from the module
-# url = ExtendedPollinationsAI.url
-# label = getattr(ExtendedPollinationsAI, 'label', None)
-# __name__ = ExtendedPollinationsAI.__name__

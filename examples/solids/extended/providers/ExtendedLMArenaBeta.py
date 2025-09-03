@@ -1,6 +1,6 @@
 from examples.solids.extended.providers.lmarenabeta.conversation_json import ConversationJson
 from examples.solids.extended.providers.lmarenabeta.data_builder_auto import build_evaluation_data_auto
-from g4f.Provider.needs_auth import LMArenaBeta
+from g4f.Provider.needs_auth import LMArena
 from g4f.tools.media import merge_media
 from g4f.typing import AsyncResult, Messages, MediaListType
 from g4f.requests import StreamSession, get_args_from_nodriver, raise_for_status, merge_cookies, has_nodriver
@@ -19,9 +19,11 @@ try:
 except ImportError:
     has_curl_cffi = False
 
-class ExtendedLMArenaBeta(LMArenaBeta):
+class ExtendedLMArenaBeta(LMArena):
     #https://lmarena.ai/api/stream/post-to-evaluation/b469180b-0fc5-4464-ba54-ba831c573164
-    api_post_endpoint = "https://lmarena.ai/api/stream/post-to-evaluation" 
+    api_endpoint = "https://lmarena.ai/nextjs-api/stream/create-evaluation"
+
+    api_post_endpoint = "https://lmarena.ai/nextjs-api/stream/post-to-evaluation" 
     
     # Inherit class attributes from the parent class
     # working = True

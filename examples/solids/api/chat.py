@@ -95,6 +95,8 @@ async def chat_completions(
                 provider = ExtendedBlackbox
             elif provider == "LMArenaBeta":
                 provider = ExtendedLMArenaBeta
+            elif provider == "LMArena":
+                provider = ExtendedLMArenaBeta
             config.provider = provider
             config.model = name
            

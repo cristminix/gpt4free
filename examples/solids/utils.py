@@ -65,6 +65,8 @@ async def lifespan(app):
             except Exception as e:
                 print(f"Failed to remove lock file {lock_file}:", e)
 
+def merge_model_groups():
+    pass
 def get_model_by_providers():
     output_dir = "examples/provider_models"
 
@@ -79,6 +81,23 @@ def get_model_by_providers():
         else:
             models = []
         for model in models:
+            if "group" in model:
+                for subModel in model["models"]:
+                    try:
+                        model_name = subModel.get("model", model.get("label", "unknown_model"))
+                        model_by_providers.append({
+                            "id": f"{model_name}:{provider_name}",
+                            "object": "model",
+                            "created": 0,
+                            "owned_by": "",
+                            "image": subModel.get("image", False),
+                            "vision": subModel.get("vision", False),
+                            "provider": provider_name,
+                        })
+                    except Exception as e:
+                        print(f"Error processing model for {provider_name}: {str(e)}")
+                        pass
+
             try:
                 model_name = model.get("model", model.get("label", "unknown_model"))
                 model_by_providers.append({

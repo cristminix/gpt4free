@@ -9,7 +9,7 @@ from typing import Iterator, Union
 from pathlib import Path as PathLib
 from inspect import signature
 
-from flask import Flask
+from flask import Flask, send_from_directory
 
 try:
     from PIL import Image 
@@ -23,7 +23,7 @@ sys.path.insert(0, str(root_dir))
 
 from g4f.gui.server.api import Api as BaseApi
 from g4f.errors import VersionNotFoundError, MissingAuthError
-from g4f.image.copy_images import copy_media, ensure_media_dir, get_media_dir
+from g4f.image.copy_images import copy_media, ensure_media_dir 
 from g4f.image import get_width_height
 from g4f.tools.run_tools import iter_run_tools
 from g4f import Provider
@@ -35,9 +35,15 @@ from g4f import version, models
 # from g4f import ChatCompletion, get_model_and_provider
 from g4f import debug
 from examples.solids.extended.service import get_model_and_provider, convert_to_provider
-
+images_dir = "./generated_images"
+media_dir = "./generated_media"
 logger = logging.getLogger(__name__)
 
+def get_media_dir() -> str:#
+    """Get the directory for storing generated media files"""
+    if os.access(images_dir, os.R_OK):
+        return images_dir
+    return media_dir
 class CustomApi(BaseApi):
     """
     Custom API that extends the default API with additional functionality.
@@ -51,6 +57,14 @@ class CustomApi(BaseApi):
         # Initialize the base API if needed
         # For static methods, initialization might not be necessary
         pass
+    def serve_images_2(self, name):
+        ensure_media_dir()
+        path=os.path.abspath(get_media_dir())
+        # Write the path to a debug file
+        with open("debug_path.txt", "w") as f:
+            f.write(path)
+        return send_from_directory(path, name)
+
     def _prepare_conversation_kwargs(self, json_data: dict):
         kwargs = {**json_data}
         model = json_data.get('model')

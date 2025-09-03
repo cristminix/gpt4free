@@ -2,14 +2,15 @@
 Main module for running the API
 """
 import uvicorn
+import g4f.debug
 from g4f import version
 from g4f.client.helper import filter_none
 
 from .config import AppConfig, DEFAULT_PORT
 from .app import (
-    create_app as _create_app, 
+    create_app as _create_app,
     create_app_debug as _create_app_debug,
-    create_app_with_gui_and_debug as _create_app_with_gui_and_debug, 
+    create_app_with_gui_and_debug as _create_app_with_gui_and_debug,
     create_app_with_demo_and_debug as _create_app_with_demo_and_debug
 )
 
@@ -22,6 +23,9 @@ def run_api(
     **kwargs
 ) -> None:
     print(f'Starting server... [g4f v-{version.utils.current_version}]' + (" (debug)" if debug else ""))
+    
+    if debug:
+        g4f.debug.logging = True
     
     if use_colors is None:
         use_colors = debug

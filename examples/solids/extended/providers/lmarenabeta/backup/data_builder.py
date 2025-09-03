@@ -72,17 +72,47 @@ def build_evaluation_data(
         conversation_json = ConversationJson(conversation.id)
         conversation_json.load()
         EVALUATION_SESSION_ID = conversation.id
-   
-    messageHistory = conversation_json.get("messageHistory")
-    #_lastEvaluationSessionId = conversation_json.get("evaluationSessionId")
+    if use_conversation_file:
+        messageHistory = conversation_json.get("messageHistory")
+        #_lastEvaluationSessionId = conversation_json.get("evaluationSessionId")
 
-  
-    conversation_json.set("evaluationSessionId",EVALUATION_SESSION_ID)
-    if not messageHistory:
-        _evaluationSessionId,_model_id,_userMessageId,_modelAMessageId = conversation_json.get_or_set_default_config(evaluationSessionId,model_id,userMessageId,modelAMessageId)
-        # INITAL FIRST MESSAGE
-        messages = [
-                {
+    
+        conversation_json.set("evaluationSessionId",EVALUATION_SESSION_ID)
+        if not messageHistory:
+            _evaluationSessionId,_model_id,_userMessageId,_modelAMessageId = conversation_json.get_or_set_default_config(evaluationSessionId,model_id,userMessageId,modelAMessageId)
+            # INITAL FIRST MESSAGE
+            messages = [
+                    {
+                        "id": userMessageId,
+                        "role": "user",
+                        "content": prompt,
+                        "experimental_attachments": experimental_attachments,
+                        "parentMessageIds": parentMessageIds,
+                        "participantPosition": "a",
+                        "modelId": None,
+                        "evaluationSessionId": EVALUATION_SESSION_ID,
+                        "status": "pending",
+                        "failureReason": None
+                    },
+                    {
+                        "id": _modelAMessageId,
+                        "role": "assistant",
+                        "content": "",
+                        "experimental_attachments": [],
+                        "parentMessageIds": [userMessageId],
+                        "participantPosition": "a",
+                        "modelId": model_id,
+                        "evaluationSessionId": EVALUATION_SESSION_ID,
+                        "status": "pending",
+                        "failureReason": None
+                    }
+                ]
+        else:
+            messages = messageHistory
+            _lastModelAMessageId = conversation_json.get("modelAMessageId")
+            parentMessageIds= [_lastModelAMessageId]
+            conversation_json.set("modelAMessageId",modelAMessageId)
+            messages.append({
                     "id": userMessageId,
                     "role": "user",
                     "content": prompt,
@@ -93,9 +123,10 @@ def build_evaluation_data(
                     "evaluationSessionId": EVALUATION_SESSION_ID,
                     "status": "pending",
                     "failureReason": None
-                },
-                {
-                    "id": _modelAMessageId,
+                })
+
+            messages.append({
+                    "id": modelAMessageId,
                     "role": "assistant",
                     "content": "",
                     "experimental_attachments": [],
@@ -105,43 +136,39 @@ def build_evaluation_data(
                     "evaluationSessionId": EVALUATION_SESSION_ID,
                     "status": "pending",
                     "failureReason": None
-                }
-            ]
+                })
+        if use_conversation_file:
+            conversation_json.set("lastMessage",messages)    
+        
+        if hasattr(conversation,"message_ids") :
+            parentMessageIds = conversation.message_ids
     else:
-        messages = messageHistory
-        _lastModelAMessageId = conversation_json.get("modelAMessageId")
-        parentMessageIds= [_lastModelAMessageId]
-        conversation_json.set("modelAMessageId",modelAMessageId)
-        messages.append({
-                "id": userMessageId,
-                "role": "user",
-                "content": prompt,
-                "experimental_attachments": experimental_attachments,
-                "parentMessageIds": parentMessageIds,
-                "participantPosition": "a",
-                "modelId": None,
-                "evaluationSessionId": EVALUATION_SESSION_ID,
-                "status": "pending",
-                "failureReason": None
-            })
-
-        messages.append({
-                "id": modelAMessageId,
-                "role": "assistant",
-                "content": "",
-                "experimental_attachments": [],
-                "parentMessageIds": [userMessageId],
-                "participantPosition": "a",
-                "modelId": model_id,
-                "evaluationSessionId": EVALUATION_SESSION_ID,
-                "status": "pending",
-                "failureReason": None
-            })
-    if use_conversation_file:
-        conversation_json.set("lastMessage",messages)    
-       
-    if hasattr(conversation,"message_ids") :
-        parentMessageIds = conversation.message_ids
+        messages = [
+                    {
+                        "id": userMessageId,
+                        "role": "user",
+                        "content": prompt,
+                        "experimental_attachments": experimental_attachments,
+                        "parentMessageIds": [],
+                        "participantPosition": "a",
+                        "modelId": None,
+                        "evaluationSessionId": EVALUATION_SESSION_ID,
+                        "status": "pending",
+                        "failureReason": None
+                    },
+                    {
+                        "id": modelAMessageId,
+                        "role": "assistant",
+                        "content": "",
+                        "experimental_attachments": [],
+                        "parentMessageIds": [userMessageId],
+                        "participantPosition": "a",
+                        "modelId": model_id,
+                        "evaluationSessionId": EVALUATION_SESSION_ID,
+                        "status": "pending",
+                        "failureReason": None
+                    }
+                ]
     data = {
         "id": EVALUATION_SESSION_ID,
         "mode": "direct",

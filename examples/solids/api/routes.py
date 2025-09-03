@@ -19,6 +19,8 @@ except ImportError:
     class Annotated:
         pass
 
+from g4f import debug
+debug.enable_logging()
 from g4f.client import ChatCompletion, ClientResponse, ImagesResponse
 from g4f.api.stubs import (
     ChatCompletionsConfig, ImageGenerationConfig,
@@ -211,6 +213,7 @@ def register_routes(api_instance):
         HTTP_404_NOT_FOUND: {}
     })
     async def get_media_endpoint(filename, request: Request, thumbnail: bool = False):
+        debug.log(filename)
         return await get_media(filename, request, thumbnail)
 
     @api_instance.app.get("/thumbnail/{filename}", responses={

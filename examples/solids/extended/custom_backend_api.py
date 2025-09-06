@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from flask_cors import CORS
 import flask
 import os
 import time
@@ -78,6 +79,7 @@ class CustomBackend_Api(CustomApi):
             app (Flask): Flask application instance to attach routes to.
         """
         self.app: Flask = app
+        CORS(app)  # Enable CORS for all routes
         self.chat_cache = {}
 
         if has_crypto:

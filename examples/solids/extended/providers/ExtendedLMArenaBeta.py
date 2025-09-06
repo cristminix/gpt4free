@@ -1,6 +1,7 @@
 from examples.solids.extended.providers.lmarenabeta.conversation_json import ConversationJson
 from examples.solids.extended.providers.lmarenabeta.data_builder_auto import build_evaluation_data_auto
 from g4f.Provider.needs_auth import LMArena
+from g4f.Provider.needs_auth.LMArena import click_trunstile,image_models
 from g4f.tools.media import merge_media
 from g4f.typing import AsyncResult, Messages, MediaListType
 from g4f.requests import StreamSession, get_args_from_nodriver, raise_for_status, merge_cookies, has_nodriver
@@ -126,6 +127,9 @@ class ExtendedLMArenaBeta(LMArena):
                 pass
             elif has_nodriver or cls.share_url is None:
                 async def callback(page):
+                    element = await page.select('[style="display: grid;"]')
+                    if element:
+                        await click_trunstile(page, 'document.querySelector(\'[style="display: grid;"]\')')
                     await page.find("Ask anything…", 120)
                     button = await page.find("Accept Cookies")
                     if button:
@@ -137,19 +141,7 @@ class ExtendedLMArenaBeta(LMArena):
                         await page.select('#cf-turnstile', 300)
                         debug.log("Found Element: 'cf-turnstile'")
                         await asyncio.sleep(3)
-                        for _ in range(3):
-                            size = None
-                            for idx in range(15):
-                                size = await page.js_dumps('document.getElementById("cf-turnstile")?.getBoundingClientRect()||{}')
-                                debug.log("Found size:", {size.get("x"), size.get("y")})
-                                if "x" not in size:
-                                    break
-                                await page.flash_point(size.get("x") + idx * 2, size.get("y") + idx * 2)
-                                await page.mouse_click(size.get("x") + idx * 2, size.get("y") + idx * 2)
-                                await asyncio.sleep(1)
-                            if "x" not in size:
-                                break
-                        debug.log("Clicked on the turnstile.")
+                        await click_trunstile(page)
                     while not await page.evaluate('document.cookie.indexOf("arena-auth-prod-v1") >= 0'):
                         await asyncio.sleep(1)
                     while not await page.evaluate('document.querySelector(\'textarea\')'):
@@ -179,7 +171,7 @@ class ExtendedLMArenaBeta(LMArena):
 
             if not cls._models_loaded:
                 cls.get_models()
-            is_image_model = model in cls.image_models
+            is_image_model = model in image_models
             if not model:
                 model = cls.default_model
             if model in cls.model_aliases:
@@ -190,8 +182,7 @@ class ExtendedLMArenaBeta(LMArena):
                 model_id = cls.image_models[model]
             else:
                 raise ModelNotFoundError(f"Model '{model}' is not supported by LMArena Beta.")
-            if hasattr(conversation,"id"):
-                debug.log(f"conversation id {conversation.id}")
+            
             userMessageId = str(uuid.uuid4())
             modelAMessageId = str(uuid.uuid4())
             evaluationSessionId = str(uuid.uuid4())

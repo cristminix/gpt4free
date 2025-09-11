@@ -247,6 +247,7 @@ class ExtendedLMArenaBeta(LMArena):
                     "modality": "image" if is_image_model else "chat"
                 }
             # exit()
+            debug.log(f"using proxy:{proxy}")
             try:
                 async with StreamSession(**args, timeout=timeout) as session:
                     # {cls.api_post_endpoint}/{evaluationSessionId}

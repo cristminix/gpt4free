@@ -250,6 +250,90 @@ class CustomBackend_Api(CustomApi):
                 f.write(f"{json.dumps(data)}\n")
             return {}
 
+        # Endpoint untuk fungsionalitas database SQLite
+        try:
+            from examples.custom_inference_api.db.usages import (
+                upsert_usage, insert_usage, update_usage,
+                get_usage_by_provider_model_date, get_all_usages, get_usages_by_provider
+            )
+            has_sqlite = True
+        except ImportError:
+            has_sqlite = False
+
+        @app.route('/backend-api/v2/db/usage', methods=['POST'])
+        async def add_db_usage():
+            if not has_sqlite:
+                return jsonify({"error": {"message": "SQLite support is not available"}}), 501
+            
+            try:
+                data = request.json
+                provider = data.get('provider')
+                model = data.get('model')
+                date = data.get('date')
+                connections = data.get('connections', 0)
+                tokens = data.get('tokens', 0)
+                ipaddr = data.get('ipaddr', '')
+                
+                if not provider or not model or not date:
+                    return jsonify({"error": {"message": "Provider, model, and date are required"}}), 400
+                
+                # Menambahkan atau mengupdate penggunaan
+                usage = await upsert_usage(provider, model, date, connections, tokens, ipaddr)
+                return jsonify({"message": "Usage recorded successfully", "usage": {
+                    "id": usage.id,
+                    "provider": usage.provider,
+                    "model": usage.model,
+                    "date": usage.date,
+                    "connections": usage.connections,
+                    "tokens": usage.tokens,
+                    "ipaddr": usage.ipaddr,
+                    "updated_at": usage.updated_at
+                }}), 200
+            except Exception as e:
+                logger.exception(e)
+                return jsonify({"error": {"message": f"Failed to record usage: {str(e)}"}}), 500
+
+        @app.route('/backend-api/v2/db/usage', methods=['GET'])
+        async def get_db_usages():
+            if not has_sqlite:
+                return jsonify({"error": {"message": "SQLite support is not available"}}), 501
+            
+            try:
+                # Mendapatkan semua penggunaan
+                usages = await get_all_usages()
+                usages_list = [{
+                    "id": usage.id,
+                    "provider": usage.provider,
+                    "model": usage.model,
+                    "date": usage.date,
+                    "connections": usage.connections,
+                    "tokens": usage.tokens,
+                    "ipaddr": usage.ipaddr,
+                    "updated_at": usage.updated_at
+                } for usage in usages]
+                return jsonify({"usages": usages_list}), 200
+            except Exception as e:
+                logger.exception(e)
+                return jsonify({"error": {"message": f"Failed to retrieve usages: {str(e)}"}}), 500
+
+        @app.route('/backend-api/v2/db/usage/provider/<provider_name>', methods=['GET'])
+        async def get_db_usages_by_provider(provider_name: str):
+            if not has_sqlite:
+                return jsonify({"error": {"message": "SQLite support is not available"}}), 501
+            
+            try:
+                # Mendapatkan penggunaan berdasarkan provider
+                ipaddr = request.args.get('ipaddr')
+                result = await get_usages_by_provider(provider_name, ipaddr)
+                
+                if result is None:
+                    return jsonify({"message": "No usage data found for this provider"}), 404
+                
+                return jsonify({"provider": provider_name, "usage": result}), 200
+            except Exception as e:
+                logger.exception(e)
+                return jsonify({"error": {"message": f"Failed to retrieve usage by provider: {str(e)}"}}), 500
+
         @app.route('/backend-api/v2/memory/<user_id>', methods=['POST'])
         def add_memory(user_id: str):
             api_key = request.headers.get("x_api_key")

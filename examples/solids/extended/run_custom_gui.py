@@ -21,7 +21,7 @@ def run_gui(host: str = '0.0.0.0', port: int = 8080, debug: bool = False, demo: 
     # Import here to ensure the path is set correctly
     from flask import Flask
     from g4f.gui.server.app import create_app
-    from g4f.gui.server.website import Website
+    from examples.solids.extended.website import Website
     from g4f import debug as g4f_debug
     
     # Import our custom backend API

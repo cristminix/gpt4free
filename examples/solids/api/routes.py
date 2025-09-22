@@ -19,6 +19,7 @@ except ImportError:
     class Annotated:
         pass
 
+from examples.solids.api.utils import get_messages
 from g4f import debug
 debug.enable_logging()
 from g4f.client import ChatCompletion, ClientResponse, ImagesResponse
@@ -44,6 +45,9 @@ from .media import (
     upload_cookies, get_json, get_media, get_media_thumbnail
 )
 
+async def modify_request_config(source_config):
+    source_config.messages = await get_messages(source_config.messages)
+    return source_config
 def register_routes(api_instance):
     """Register all API routes"""
     if not AppConfig.gui:
@@ -96,14 +100,15 @@ def register_routes(api_instance):
         x_user: Annotated[str | None, Header()] = None,
         
     ):
-        
-        return await chat_completions(config, credentials, provider, conversation_id, x_user, api_instance.client, api_instance.conversations)
+        # debug.log(config)
+        modified_config=await modify_request_config(config)
+        return await chat_completions(modified_config, credentials, provider, conversation_id, x_user, api_instance.client, api_instance.conversations)
 
     responses = {
         HTTP_200_OK: {"model": ClientResponse},
         HTTP_401_UNAUTHORIZED: {"model": ErrorResponseModel},
         HTTP_404_NOT_FOUND: {"model": ErrorResponseModel},
-        HTTP_422_UNPROCESSABLE_ENTITY: {"model": ErrorResponseModel},
+        # HTTP_422_UNPROCESSABLE_ENTITY: {"model": ErrorResponseModel},
         HTTP_500_INTERNAL_SERVER_ERROR: {"model": ErrorResponseModel},
     }
     @api_instance.app.post("/v1/responses", responses=responses)

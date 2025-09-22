@@ -1,2 +1,4 @@
 flask_cors
 sqlalchemy
+aiohttp_socks
+flask[async]

@@ -50,6 +50,7 @@ from g4f.client.service import get_model_and_provider
 from g4f import debug, models
 # from g4f.gui.server.api import Api
 from examples.solids.extended.custom_api import CustomApi
+from examples.solids.extended.llm_routes import llm_chat_bp
 
 logger = logging.getLogger(__name__)
 
@@ -80,6 +81,7 @@ class CustomBackend_Api(CustomApi):
         """
         self.app: Flask = app
         CORS(app)  # Enable CORS for all routes
+        app.register_blueprint(llm_chat_bp)
         self.chat_cache = {}
 
         if has_crypto:

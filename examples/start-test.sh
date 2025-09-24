@@ -3,4 +3,4 @@
 export PYTHONPATH=$(pwd)
 
  
-uv run python3 -m examples.custom_inference_api.test
+uv run python -m examples.custom_inference_api.test

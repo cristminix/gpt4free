@@ -8,4 +8,4 @@ $env:HUGGINGFACE_API_KEY=""
 $env:TOGETHER_API_KEY=""
 
 # Run the inference API
-uv run python3 -m examples.custom_inference_api.run --debug
+uv run python -m examples.custom_inference_api.run --debug

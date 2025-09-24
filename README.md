@@ -43,7 +43,7 @@ uv sync
 ### Inisialisasi Database SQLite
 
 ```bash
-uv run python examples/custom_inference_api/init_database.py
+./examples/init-database.sh
 ```
 
 ## Menjalankan Aplikasi

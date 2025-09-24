@@ -13,7 +13,13 @@ Sebelum memulai, pastikan sistem Anda memiliki:
 - uv (dapat diinstal dengan `pip install uv`)
 
 ## Instalasi
+### Clone project
+```bash 
+git clone https://github.com/cristminix/gpt4free
+cd gpt4free
+```
 
+## Within project directory
 ### Mengunduh Dependensi
 
 ```bash

@@ -1,0 +1,38 @@
+[project]
+name = "gpt4free-examples"
+version = "0.1.0"
+description = "Examples for gpt4free project"
+dependencies = [
+    "requests",
+    "pycryptodome",
+    "curl_cffi>=0.6.2",
+    "aiohttp",
+    "certifi",
+    "browser_cookie3",
+    "nest_asyncio",
+    "werkzeug",
+    "pillow",
+    "platformdirs",
+    "fastapi",
+    "uvicorn",
+    "flask",
+    "brotli",
+    "beautifulsoup4",
+    "setuptools",
+    "nodriver",
+    "python-multipart",
+    "a2wsgi",
+    "python-dotenv",
+    "ddgs",
+    "flask_cors",
+    "sqlalchemy",
+    "aiohttp_socks",
+    "flask[async]",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

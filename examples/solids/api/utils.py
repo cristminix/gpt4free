@@ -2,8 +2,10 @@
 Utility functions for the API module
 """
 import base64
+import json
 import os
 import tempfile
+from datetime import datetime
 from typing import List, Optional, Union, Dict, Any
 from urllib.parse import urlparse
 
@@ -95,6 +97,8 @@ async def get_messages(input_messages: Messages, provider_api: Any=None) -> Mess
             })
     
     messages: Messages = []
+    prev_msg=None
+    system_message_added = False
     for msg in processed_messages:
         if msg["role"] == "user" and isinstance(msg["content"], list):
             contents: Message = {
@@ -127,26 +131,60 @@ async def get_messages(input_messages: Messages, provider_api: Any=None) -> Mess
             messages.append(contents)
         else:
             if msg["role"] == "system":
-                system_content_str = ""
-                system_msg_content = []
-                if isinstance(msg["content"], list):
-                    for item in msg["content"]:
-                        if item["type"] == "text":
-                            system_msg_content.append(item["text"])
-                    if system_msg_content:
-                        system_content_str = "\n".join(system_msg_content)
-                else:
-                    system_content_str = msg["content"] or ""
-                
-                messages.append({
-                    "role": msg["role"],
-                    "content": system_content_str
-                })
+                # Only add system message if it hasn't been added yet
+                if not system_message_added:
+                    system_content_str = ""
+                    system_msg_content = []
+                    if isinstance(msg["content"], list):
+                        for item in msg["content"]:
+                            if item["type"] == "text":
+                                system_msg_content.append(item["text"])
+                        if system_msg_content:
+                            system_content_str = "\n".join(system_msg_content)
+                    else:
+                        system_content_str = msg["content"] or ""
+                    
+                    messages.append({
+                        "role": msg["role"],
+                        "content": system_content_str
+                    })
+                    system_message_added = True
+            elif msg["role"] == "tool":
+                if prev_msg and "tool_calls" in prev_msg and prev_msg['tool_calls']:
+                    id=prev_msg['tool_calls'][0]["id"]
+                    msg["role"]="user"
+                    msg["tool_call_id"]=id
+                    msg["content"]=f"Tool response for call ID {id}: {msg['content']}"
+                messages.append(msg)
+
             else:
-                messages.append({
-                    "role": msg["role"],
-                    "content": msg["content"] or ""
-                })
-    # if debug.logging:
-    #     debug.log(messages)
+                if not "content" in msg:
+                    msg["content"]=""
+                messages.append(msg)
+        if "tool_calls" in msg:
+            tidx=0
+            for tc in msg["tool_calls"]:
+                if not "type" in tc:
+                    tc["type"] = "function"
+                    msg["tool_calls"][tidx] = tc
+                tidx += 1
+
+        prev_msg=msg
+        debug.log(msg)
+
+    # write messages to  json to  examples/logs/request_messages/current timestamp+"message.json"
+    # Get current timestamp
+    current_time = datetime.now()
+    timestamp_str = current_time.strftime("%Y%m%d_%H%M%S_%f")
+    
+    # Create filename
+    filename = f"messages_{timestamp_str}.json"
+    filepath = os.path.join("examples", "logs", "request_messages", filename)
+    
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    
+    # Write messages to JSON file
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(messages, f, indent=2, ensure_ascii=False)
     return messages

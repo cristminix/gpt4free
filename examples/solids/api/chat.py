@@ -30,7 +30,7 @@ from g4f.providers.response import BaseConversation, JsonConversation
 from g4f.client.helper import filter_none
 from g4f.image import is_data_an_media
 from g4f.errors import ProviderNotFoundError, ModelNotFoundError, MissingAuthError, NoValidHarFileError
-from g4f.api.stubs import (
+from ..stubs import (
     ChatCompletionsConfig,
     ResponsesConfig,
     ErrorResponseModel
@@ -89,11 +89,11 @@ async def chat_completions(
         # Create the completion response
         if True:
             name, provider = get_name_and_provider(config.model)
-            if provider == "PollinationsAI" :
-                provider = ExtendedPollinationsAI
-            elif provider == "Balackbox":
-                provider = ExtendedBlackbox
-            elif provider == "LMArenaBeta":
+            # if provider == "PollinationsAI" :
+            #     provider = ExtendedPollinationsAI
+            # elif provider == "Balackbox":
+            #     provider = ExtendedBlackbox
+            if provider == "LMArenaBeta":
                 provider = ExtendedLMArenaBeta
             elif provider == "LMArena":
                 provider = ExtendedLMArenaBeta

@@ -23,7 +23,7 @@ from examples.solids.api.utils import get_messages
 from g4f import debug
 debug.enable_logging()
 from g4f.client import ChatCompletion, ClientResponse, ImagesResponse
-from g4f.api.stubs import (
+from ..stubs import (
     ChatCompletionsConfig, ImageGenerationConfig,
     ProviderResponseModel, ModelResponseModel,
     ErrorResponseModel, ProviderResponseDetailModel,

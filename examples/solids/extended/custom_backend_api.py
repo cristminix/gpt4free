@@ -135,7 +135,7 @@ class CustomBackend_Api(CustomApi):
         @app.route('/backend-api/v2/models/<provider>', methods=['GET'])
         def jsonify_provider_models(**kwargs):
             try:
-                response = self.get_provider_models(**kwargs)
+                response = self.get_provider_models(kwargs.get('provider', ''))
                 if response is None:
                     return jsonify({"error": {"message": "Provider not found"}}), 404
             except MissingAuthError as e:
@@ -710,7 +710,19 @@ class CustomBackend_Api(CustomApi):
         api_key = request.headers.get("x_api_key")
         api_base = request.headers.get("x_api_base")
         ignored = request.headers.get("x_ignored", "").split()
-        return super().get_provider_models(provider, api_key, api_base, ignored)
+        
+        # Provide empty string if there is no api_key to prevent OpenAIFM.get_grouped_models() error
+        api_key_value = api_key if api_key else ""
+        
+        try:
+            # Call super method with the correct parameters to avoid unexpected keyword argument error
+            return super().get_provider_models(provider, api_key_value, api_base, ignored)
+        except TypeError as e:
+            if "unexpected keyword argument" in str(e) and "api_key" in str(e):
+                # If api_key is not supported, try calling without it
+                return super().get_provider_models(provider, "", api_base, ignored)
+            else:
+                raise e
 
     def _format_json(self, response_type: str, content = None, **kwargs) -> str:
         """

@@ -1,0 +1,15 @@
+    {
+        "terminal.integrated.env.windows": {
+            "PYTHONPATH": "${workspaceFolder}\\.deps\\gpt4free;${env:PYTHONPATH}"
+        },
+        "terminal.integrated.env.linux": {
+            "PYTHONPATH": "${workspaceFolder}/.deps/gpt4free:${env:PYTHONPATH}"
+        },
+        "terminal.integrated.env.osx": {
+            "PYTHONPATH": "${workspaceFolder}/.deps/gpt4free:${env:PYTHONPATH}"
+        },
+        "python.languageServer": "Pylance",
+        "python.analysis.extraPaths": [
+            "${workspaceFolder}/.deps/gpt4free"
+        ]
+    }

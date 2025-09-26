@@ -170,7 +170,7 @@ class ExtendedLMArenaBeta(LMArena):
                 return
 
             if not cls._models_loaded:
-                cls.get_models()
+                cls.get_models_()
             is_image_model = model in image_models
             if not model:
                 model = cls.default_model

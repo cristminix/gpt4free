@@ -711,6 +711,64 @@ class CustomBackend_Api(CustomApi):
         api_base = request.headers.get("x_api_base")
         ignored = request.headers.get("x_ignored", "").split()
         
+        # Check if this is a problematic provider that doesn't accept parameters in get_grouped_models
+        if provider in ["OpenAIFM", "PollinationsAI", "PollinationsImage"]:
+            # Import the provider and temporarily patch if needed
+            try:
+                if provider == "OpenAIFM":
+                    from g4f.Provider.audio.OpenAIFM import OpenAIFM
+                    original_method = OpenAIFM.get_grouped_models
+                    
+                    # Create a wrapper that accepts the parameters but ignores them
+                    def patched_get_grouped_models(cls, api_key: str = None, api_base: str = None):
+                        return original_method()
+                    
+                    # Temporarily patch the method
+                    OpenAIFM.get_grouped_models = classmethod(patched_get_grouped_models)
+                    
+                    try:
+                        return super().get_provider_models(provider, "", api_base, ignored)
+                    finally:
+                        # Restore the original method
+                        OpenAIFM.get_grouped_models = original_method
+                        
+                elif provider == "PollinationsAI":
+                    from g4f.Provider.PollinationsAI import PollinationsAI
+                    original_method = PollinationsAI.get_grouped_models
+                    
+                    # Create a wrapper that accepts the parameters but ignores them
+                    def patched_get_grouped_models(cls, api_key: str = None, api_base: str = None):
+                        return original_method()
+                    
+                    # Temporarily patch the method
+                    PollinationsAI.get_grouped_models = classmethod(patched_get_grouped_models)
+                    
+                    try:
+                        return super().get_provider_models(provider, "", api_base, ignored)
+                    finally:
+                        # Restore the original method
+                        PollinationsAI.get_grouped_models = original_method
+                        
+                elif provider == "PollinationsImage":
+                    from g4f.Provider.PollinationsImage import PollinationsImage
+                    original_method = PollinationsImage.get_grouped_models
+                    
+                    # Create a wrapper that accepts the parameters but ignores them
+                    def patched_get_grouped_models(cls, api_key: str = None, api_base: str = None):
+                        return original_method()
+                    
+                    # Temporarily patch the method
+                    PollinationsImage.get_grouped_models = classmethod(patched_get_grouped_models)
+                    
+                    try:
+                        return super().get_provider_models(provider, "", api_base, ignored)
+                    finally:
+                        # Restore the original method
+                        PollinationsImage.get_grouped_models = original_method
+            except ImportError:
+                # If import fails, fall back to the original method
+                pass
+        
         # Provide empty string if there is no api_key to prevent OpenAIFM.get_grouped_models() error
         api_key_value = api_key if api_key else ""
         
@@ -722,6 +780,7 @@ class CustomBackend_Api(CustomApi):
                 # If api_key is not supported, try calling without it
                 return super().get_provider_models(provider, "", api_base, ignored)
             else:
+                # If it's a different TypeError, re-raise it
                 raise e
 
     def _format_json(self, response_type: str, content = None, **kwargs) -> str:

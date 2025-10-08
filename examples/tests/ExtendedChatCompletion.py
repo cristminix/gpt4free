@@ -2,7 +2,7 @@
 Application wrapper that uses Extended 
 This is the cleanest approach for using your extended provider in applications.
 """ 
-from examples.solids.extended.providers import ExtendedBlackbox,ExtendedLMArenaBeta,ExtendedPollinationsAI
+from examples.solids.extended.providers import ExtendedBlackbox, ExtendedGLM,ExtendedLMArenaBeta,ExtendedPollinationsAI
 from g4f import ChatCompletion
 from g4f.models import Model
 from g4f.Provider import ProviderType
@@ -31,7 +31,8 @@ class ExtendedChatCompletion:
             provider = ExtendedPollinationsAI
         elif provider == "LMArenaBeta":
             provider = ExtendedLMArenaBeta
-            
+        elif provider == "GLM":
+                provider = ExtendedGLM
         return ChatCompletion.create(
             model=model,
             messages=messages,

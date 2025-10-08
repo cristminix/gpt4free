@@ -4,6 +4,7 @@ Chat completions API routes
 import json
 from typing import List, Optional
 
+from examples.solids.extended.providers import ExtendedGLM
 from g4f import debug
 
 # Enable debug logging
@@ -97,6 +98,8 @@ async def chat_completions(
                 provider = ExtendedLMArenaBeta
             elif provider == "LMArena":
                 provider = ExtendedLMArenaBeta
+            elif provider == "GLM":
+                provider = ExtendedGLM
             config.provider = provider
             config.model = name
            

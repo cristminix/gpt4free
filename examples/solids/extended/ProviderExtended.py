@@ -14,7 +14,7 @@ from g4f.Provider import *
 from g4f.Provider import ProviderUtils as BaseProviderUtils
 
 # Import extended providers
-from examples.solids.extended.providers import ExtendedLMArenaBeta, ExtendedPollinationsAI, ExtendedBlackbox
+from examples.solids.extended.providers import ExtendedGLM, ExtendedLMArenaBeta, ExtendedPollinationsAI, ExtendedBlackbox
 
 # Override original providers with extended versions
 # This ensures that when importing with 'from ProviderExtended import *',
@@ -23,7 +23,7 @@ LMArenaBeta = ExtendedLMArenaBeta
 LMArena = ExtendedLMArenaBeta
 PollinationsAI = ExtendedPollinationsAI
 Blackbox = ExtendedBlackbox
-
+GLM  = ExtendedGLM,
 class ProviderUtils(BaseProviderUtils):
     """
     Extended ProviderUtils class that includes custom providers.
@@ -35,7 +35,8 @@ class ProviderUtils(BaseProviderUtils):
         "LMArenaBeta": ExtendedLMArenaBeta,
         "LMArena": ExtendedLMArenaBeta,
         "PollinationsAI": ExtendedPollinationsAI,
-        "Blackbox": ExtendedBlackbox
+        "Blackbox": ExtendedBlackbox,
+        "GLM"  :ExtendedGLM
     })
 
 # Make sure all providers are available when this module is imported

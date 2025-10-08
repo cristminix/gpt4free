@@ -1,9 +1,11 @@
+import os
 from g4f.Provider.GLM import GLM
 from g4f.typing import AsyncResult, Messages
 from g4f.providers.response import Usage, Reasoning
 from g4f.requests import StreamSession, raise_for_status
 from g4f import debug
 # from __future__ import annotations
+import time
 import json
 
 import uuid
@@ -19,6 +21,7 @@ class ExtendedGLM(GLM):
     active_by_default = True
     default_model = "GLM-4.5"
     api_key = None
+    auth_user_id=None
 
     @classmethod
     def create_signature_with_timestamp(cls,e: str, t: str):
@@ -133,27 +136,102 @@ class ExtendedGLM(GLM):
         endpoint = f"{cls.api_endpoint}?{url_params}&signature_timestamp={timestamp}"
         
         return (endpoint, signature, timestamp)
-         
+    @classmethod
+    def get_auth_from_cache(cls):
+        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-auth.json")
+        #get file mtime
+        #if time compared by now is less than 30 minutes
+        # read cache_file_path and return json
+        #else return none
+        if os.path.exists(cache_file_path):
+            # Get the modification time of the file
+            file_mtime = os.path.getmtime(cache_file_path)
+            # Get current time
+            current_time = time.time()
+            # Calculate the difference in seconds
+            time_diff = current_time - file_mtime
+            # Check if the file is less than 30 minutes old (30 * 60 seconds)
+            if time_diff < 30 * 60:
+                try:
+                    with open(cache_file_path, 'r') as file:
+                        return json.load(file)
+                except (json.JSONDecodeError, IOError):
+                    # If there's an error reading or parsing the file, delete it and return None
+                    try:
+                        os.remove(cache_file_path)
+                    except OSError:
+                        pass  # If we can't delete the file, just return None
+                    return None
+        return None
+            
+    @classmethod
+    def save_auth_to_cache(cls,data):
+        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-auth.json")
+
+        with open(cache_file_path, 'w') as file:
+            json.dump(data, file)
+    @classmethod
+    def get_models_from_cache(cls):
+        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-models.json")
+        #get file mtime
+        #if time compared by now is less than one day
+        # read cache_file_path and return json
+        #else return none
+        if os.path.exists(cache_file_path):
+            # Get the modification time of the file
+            file_mtime = os.path.getmtime(cache_file_path)
+            # Get current time
+            current_time = time.time()
+            # Calculate the difference in seconds
+            time_diff = current_time - file_mtime
+            # Check if the file is less than one day old (24 * 60 * 60 seconds)
+            if time_diff < 24 * 60 * 60:
+                try:
+                    with open(cache_file_path, 'r') as file:
+                        return json.load(file)
+                except (json.JSONDecodeError, IOError):
+                    # If there's an error reading or parsing the file, delete it and return None
+                    try:
+                        os.remove(cache_file_path)
+                    except OSError:
+                        pass  # If we can't delete the file, just return None
+                    return None
+        return None
+    @classmethod
+    def save_models_to_cache(cls,data):
+        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-models.json")
+
+        with open(cache_file_path, 'w') as file:
+            json.dump(data, file)
     @classmethod
     def get_models(cls, **kwargs) -> str:
         if not cls.models:
             try:
-                response = requests.get(f"{cls.url}/api/v1/auths/")
-                debug.log(f"GLM auth response: {response.status_code}")
-                response.raise_for_status()
-                response_json = response.json()
-                cls.api_key = response_json.get("token")
-                debug.log(response_json)
-                debug.log(f"GLM auth response: {response.status_code}")
-
-                response = requests.get(f"{cls.url}/api/models", headers={"Authorization": f"Bearer {cls.api_key}"})
-                response.raise_for_status()
-                data = response.json().get("data", [])
-
-                cls.model_aliases = {item.get("name", "").replace("\u4efb\u52a1\u4e13\u7528", "ChatGLM"): item.get("id") for item in data}
-                cls.models = list(cls.model_aliases.keys())
-                debug.log(cls.models)
-                debug.log(cls.model_aliases)
+                response_json=cls.get_auth_from_cache()
+                if response_json is None:
+                    response = requests.get(f"{cls.url}/api/v1/auths/")
+                    debug.log(f"GLM auth response: {response.status_code}")
+                    response.raise_for_status()
+                    response_json = response.json()
+                    cls.save_auth_to_cache(response_json)
+                if response_json is not None:
+                    
+                    cls.api_key = response_json.get("token")
+                    cls.auth_user_id=response_json.get("id")
+                    debug.log(response_json)
+                    debug.log(f"GLM auth response: {response.status_code}")
+                if cls.api_key is not None:
+                    data = cls.get_models_from_cache()
+                    if data is None:
+                        response = requests.get(f"{cls.url}/api/models", headers={"Authorization": f"Bearer {cls.api_key}"})
+                        response.raise_for_status()
+                        data = response.json().get("data", [])
+                        cls.save_models_to_cache(data)
+                    if data is not None:
+                        cls.model_aliases = {item.get("name", "").replace("\u4efb\u52a1\u4e13\u7528", "ChatGLM"): item.get("id") for item in data}
+                        cls.models = list(cls.model_aliases.keys())
+                        debug.log(cls.models)
+                        debug.log(cls.model_aliases)
 
             except requests.RequestException as e:
                 debug.log(f"Error fetching GLM models: {e}")
@@ -201,13 +279,13 @@ class ExtendedGLM(GLM):
                 combined_system_message_contents.append(message["content"])
             final_system_messages=[{
                 "role":"system",
-                "content":combined_system_message_contents.join("\n\n")
+                "content":"\n\n".join(combined_system_message_contents)
             }]
         else:
             final_system_messages = system_messages
         user_messages = [msg for msg in transformed_messages if msg.get('role') == 'user']
         final_messages= final_system_messages + user_messages
-        debug.log(json.dumps(final_messages, indent=2))
+        # debug.log(json.dumps(final_messages, indent=2))
         return final_messages
     
     @classmethod
@@ -247,8 +325,8 @@ class ExtendedGLM(GLM):
             raise Exception("Failed to obtain API key from authentication endpoint")
         transformed_messages = cls.transform_messages(messages)
         user_prompt= cls.get_last_user_message_content(transformed_messages)
-        debug.log(f"user_prompt:{user_prompt}")
-        endpoint, signature, timestamp = cls.get_endpoint_signature(cls.api_key,uuid.uuid4(),user_prompt)    
+        # debug.log(f"user_prompt:{user_prompt}")
+        endpoint, signature, timestamp = cls.get_endpoint_signature(cls.api_key,cls.auth_user_id,user_prompt)    
         data = {
             "chat_id": "local",
             "id": str(uuid.uuid4()),
@@ -270,8 +348,7 @@ class ExtendedGLM(GLM):
                 json=data,
                 headers={
                     "Authorization": f"Bearer {cls.api_key}",
-                      "x-fe-version": "prod-fe-1.0.95",
-                      #028eaf95b163bfa413710c2ab762b722dec75e28ea899a2bdad4ce356e9eac68
+                      "x-fe-version": "prod-fe-1.0.95", 
                       "x-signature": signature
                 },
             ) as response:

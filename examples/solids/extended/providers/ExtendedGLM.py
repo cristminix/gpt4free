@@ -1,4 +1,6 @@
 import os
+
+from platformdirs import user_config_dir
 from g4f.Provider.GLM import GLM
 from g4f.typing import AsyncResult, Messages
 from g4f.providers.response import Usage, Reasoning
@@ -124,7 +126,7 @@ class ExtendedGLM(GLM):
         sorted_payload = auth_params["sortedPayload"]
         url_params = auth_params["urlParams"]
         
-        debug.log(f"Prompt:{user_prompt}")
+        # debug.log(f"Prompt:{user_prompt}")
         last_user_prompt = user_prompt.strip()
         
         # Create signature with timestamp
@@ -138,9 +140,10 @@ class ExtendedGLM(GLM):
         return (endpoint, signature, timestamp)
     @classmethod
     def get_auth_from_cache(cls):
-        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-auth.json")
+        user_data_dir = user_config_dir("g4f")
+        cache_file_path = os.path.join(user_data_dir, "zai-auth.json")
         #get file mtime
-        #if time compared by now is less than 30 minutes
+        #if time compared by now is less than 5 minutes
         # read cache_file_path and return json
         #else return none
         if os.path.exists(cache_file_path):
@@ -151,7 +154,7 @@ class ExtendedGLM(GLM):
             # Calculate the difference in seconds
             time_diff = current_time - file_mtime
             # Check if the file is less than 30 minutes old (30 * 60 seconds)
-            if time_diff < 30 * 60:
+            if time_diff < 5 * 60:
                 try:
                     with open(cache_file_path, 'r') as file:
                         return json.load(file)
@@ -166,13 +169,16 @@ class ExtendedGLM(GLM):
             
     @classmethod
     def save_auth_to_cache(cls,data):
-        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-auth.json")
+        user_data_dir = user_config_dir("g4f")
+        cache_file_path = os.path.join(user_data_dir, "zai-auth.json")
 
         with open(cache_file_path, 'w') as file:
             json.dump(data, file)
     @classmethod
     def get_models_from_cache(cls):
-        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-models.json")
+        user_data_dir = user_config_dir("g4f")
+        cache_file_path = os.path.join(user_data_dir, "zai-models.json")
+
         #get file mtime
         #if time compared by now is less than one day
         # read cache_file_path and return json
@@ -199,7 +205,8 @@ class ExtendedGLM(GLM):
         return None
     @classmethod
     def save_models_to_cache(cls,data):
-        cache_file_path = os.path.join(os.path.dirname(__file__), "zai-models.json")
+        user_data_dir = user_config_dir("g4f")
+        cache_file_path = os.path.join(user_data_dir, "zai-models.json")
 
         with open(cache_file_path, 'w') as file:
             json.dump(data, file)
@@ -214,12 +221,14 @@ class ExtendedGLM(GLM):
                     response.raise_for_status()
                     response_json = response.json()
                     cls.save_auth_to_cache(response_json)
+                else:
+                    debug.log(f"auth loaded from cache")
                 if response_json is not None:
                     
                     cls.api_key = response_json.get("token")
                     cls.auth_user_id=response_json.get("id")
-                    debug.log(response_json)
-                    debug.log(f"GLM auth response: {response.status_code}")
+                    # debug.log(response_json)
+                    # debug.log(f"GLM auth response: {response.status_code}")
                 if cls.api_key is not None:
                     data = cls.get_models_from_cache()
                     if data is None:
@@ -227,11 +236,13 @@ class ExtendedGLM(GLM):
                         response.raise_for_status()
                         data = response.json().get("data", [])
                         cls.save_models_to_cache(data)
+                    else:
+                        debug.log(f"models loaded from cache")
                     if data is not None:
                         cls.model_aliases = {item.get("name", "").replace("\u4efb\u52a1\u4e13\u7528", "ChatGLM"): item.get("id") for item in data}
                         cls.models = list(cls.model_aliases.keys())
-                        debug.log(cls.models)
-                        debug.log(cls.model_aliases)
+                        # debug.log(cls.models)
+                        # debug.log(cls.model_aliases)
 
             except requests.RequestException as e:
                 debug.log(f"Error fetching GLM models: {e}")

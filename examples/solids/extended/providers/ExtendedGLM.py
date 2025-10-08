@@ -4,6 +4,7 @@ from g4f.providers.response import Usage, Reasoning
 from g4f.requests import StreamSession, raise_for_status
 from g4f import debug
 # from __future__ import annotations
+import json
 
 import uuid
 import requests
@@ -173,8 +174,7 @@ class ExtendedGLM(GLM):
         """
         transformed_messages = []
         
-        # Variabel untuk menampung pesan system yang digabungkan
-        system_message = None
+        
         
         for message in messages:
             if isinstance(message['content'], list):
@@ -191,8 +191,24 @@ class ExtendedGLM(GLM):
                     'role': message['role'],
                     'content': message['content']
                 })
-        
-        return transformed_messages
+        # Variabel untuk menampung pesan system yang digabungkan
+        system_messages = [msg for msg in transformed_messages if msg.get('role') == 'system']
+        combined_system_message_contents=[]
+        final_system_messages = []
+        if len(system_messages)>1:
+            # iterate system_messages and append content 
+            for message in system_messages:
+                combined_system_message_contents.append(message["content"])
+            final_system_messages=[{
+                "role":"system",
+                "content":combined_system_message_contents.join("\n\n")
+            }]
+        else:
+            final_system_messages = system_messages
+        user_messages = [msg for msg in transformed_messages if msg.get('role') == 'user']
+        final_messages= final_system_messages + user_messages
+        debug.log(json.dumps(final_messages, indent=2))
+        return final_messages
     
     @classmethod
     def get_last_user_message_content(cls, messages):

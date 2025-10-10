@@ -26,15 +26,9 @@ class ExtendedLMArenaBeta(LMArena):
 
     api_post_endpoint = "https://lmarena.ai/nextjs-api/stream/post-to-evaluation" 
     
-    # Inherit class attributes from the parent class
-    # working = True
-    # supports_stream = True
+ 
     is_extended=True
     
-    # Add any additional class attributes or methods here
-    # def __init__(self):
-    #     super().__init__()
-        # Initialize any additional attributes
     @classmethod
     def get_models_(cls) -> list[str]:
         if not cls._models_loaded and has_curl_cffi:
@@ -249,7 +243,13 @@ class ExtendedLMArenaBeta(LMArena):
             # exit()
             debug.log(f"using proxy:{proxy}")
             try:
-                async with StreamSession(**args, timeout=timeout) as session:
+                # Remove proxy from args if proxy is None to prevent curl_cffi from using default proxy
+                session_args = args.copy()
+                if proxy is None and "proxy" in session_args:
+                    # Remove proxy from session args to avoid using any default proxy
+                    session_args.pop("proxy", None)
+                
+                async with StreamSession(**session_args, timeout=timeout) as session:
                     # {cls.api_post_endpoint}/{evaluationSessionId}
                     api_endoint = cls.api_endpoint
                     # if use_conversation_json:
@@ -313,17 +313,3 @@ def get_content_type(url: str) -> str:
     else:
         return "application/octet-stream"
 
-# Define working as a module-level attribute to ensure it's available
-# when the module is accessed directly
-# working = ExtendedLMArenaBeta.working
-# supports_stream = ExtendedLMArenaBeta.supports_stream
-
-# # Define get_dict as a module-level attribute to ensure it's available
-# # when the module is accessed directly
-# def get_dict():
-#     return ExtendedLMArenaBeta.get_dict()
-
-# # Also define other attributes that might be accessed directly from the module
-# url = ExtendedLMArenaBeta.url
-# label = getattr(ExtendedLMArenaBeta, 'label', None)
-# __name__ = ExtendedLMArenaBeta.__name__

@@ -8,7 +8,7 @@ async def example_usage():
     Contoh penggunaan ExtendedLMArenaBeta dengan StreamSession
     """
     # Konfigurasi dasar
-    model = "gpt-4"  # Ganti dengan model yang tersedia
+    model = "claude-opus-4-1-20250805"  # Ganti dengan model yang tersedia
     messages = [
         {"role": "user", "content": "Halo, apa kabar?"}
     ]

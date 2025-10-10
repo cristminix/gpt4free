@@ -10,4 +10,5 @@ export PYTHONPATH=$(pwd):$(pwd)/.deps/gpt4free
 # Menampilkan informasi
 echo "Mengatur PYTHONPATH ke: $(pwd)" 
 echo "Menjalankan contoh StreamSession..."
-uv run python examples/stream-seassion/extended_glm_stream.py 
+# uv run python examples/stream-seassion/extended_glm_stream.py 
+uv run python examples/stream-seassion/extended_lmarena_beta./_stream.py 

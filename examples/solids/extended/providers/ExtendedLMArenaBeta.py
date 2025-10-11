@@ -245,7 +245,7 @@ class ExtendedLMArenaBeta(LMArena):
             try:
                 # Remove proxy from args if proxy is None to prevent curl_cffi from using default proxy
                 session_args = args.copy()
-                if proxy is None and "proxy" in session_args:
+                if proxy is None and "proxy" in session_args or proxy == "":
                     # Remove proxy from session args to avoid using any default proxy
                     session_args.pop("proxy", None)
                 

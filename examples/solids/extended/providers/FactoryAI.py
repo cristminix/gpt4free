@@ -1,18 +1,15 @@
 import os
 from dotenv import load_dotenv
 
-from platformdirs import user_config_dir
 from g4f.Provider.GLM import GLM
 from g4f.typing import AsyncResult, Messages
 from g4f.providers.response import Usage, Reasoning
 from g4f.requests import StreamSession, raise_for_status
 from g4f import debug
-# from __future__ import annotations
 import time
 import json
 
-import uuid
-import requests
+ 
 class FactoryAI(GLM):
     url = "https://app.factory.ai/api/llm"
     # API endpoints configuration
@@ -65,7 +62,6 @@ class FactoryAI(GLM):
             "use": "antrophic",
         },
     ]
-    
     model_aliases ={
         "gpt-5": "gpt-5-2025-08-07",
         "gpt-5-codex": "gpt-5-codex",
@@ -74,6 +70,7 @@ class FactoryAI(GLM):
         "claude-sonnet-4": "claude-sonnet-4-20250514",
         "glm-4.6": "glm-4.6",
       }
+    models = model_aliases.keys()
     
     @classmethod
     def build_request_headers(cls, use: str) -> dict:
@@ -855,12 +852,7 @@ class FactoryAI(GLM):
         # Build headers
         added_headers = cls.build_request_headers(use_endpoint)
         extra_headers = getattr(cls, "extra_headers", {})
-        # request_options = {
-        #     "method": "POST",
-        #     "headers": {**extra_headers, **added_headers},
-        #     "data": json.dumps(body),
-        #     **request_option,
-        # }
+     
         
         # Determine endpoint URL
         base_url = getattr(cls, "base_url", cls.url)
@@ -878,10 +870,11 @@ class FactoryAI(GLM):
             raise Exception("Failed to obtain API key from authentication endpoint")
         # print(f"apiKey:{cls.api_key}")
         # print({ "useEndpoint": use_endpoint, "realModel": realModel,"endpoint":endpoint})
-         
         headers={"Authorization": f"Bearer {cls.api_key}",**extra_headers, **added_headers}
-        # print(headers)
-        # pass
+        debug.log(f"url:{endpoint}")
+        debug.log(json.dumps(headers))
+        debug.log(json.dumps(body))
+
         async with StreamSession(
             impersonate="chrome",
             proxy=proxy,
@@ -894,10 +887,7 @@ class FactoryAI(GLM):
                 await raise_for_status(response) # type: ignore
                 usage = None
                 completion_id=0
-                async for chunk in response.sse():
-
-                    # debug.log(f"{chunk.get("type")}")
-                    # yield chunk
+                async for chunk in response.sse(): 
                     data = chunk
                     if use_endpoint == "gpt":
                         data = cls.stream_gpt(chunk,realModel,completion_id)
@@ -909,26 +899,14 @@ class FactoryAI(GLM):
                     if data is not None:
                         if data.get("choices") and len(data["choices"]) > 0:
                             delta = data["choices"][0].get("delta", {})
-                            content = delta.get("content", "")
-                            if content:
-                                # print(content, end="", flush=True)
-                                yield content
-                                completion_id +=1
-                    # if chunk.get("type") == "chat:completion":
-                    #     if not usage:
-                    #         usage = chunk.get("data", {}).get("usage")
-                    #         if usage:
-                    #             yield Usage(**usage)
-                    #     if chunk.get("data", {}).get("phase") == "thinking":
-                    #         delta_content = chunk.get("data", {}).get("delta_content")
-                    #         delta_content = delta_content.split("</summary>\n>")[-1] if delta_content else ""
-                    #         if delta_content:
-                    #             yield Reasoning(delta_content)
-                    #     else:
-                    #         edit_content = chunk.get("data", {}).get("edit_content")
-                    #         if edit_content:
-                    #             yield edit_content.split("\n</details>\n")[-1]
-                    #         else:
-                    #             delta_content = chunk.get("data", {}).get("delta_content")
-                    #             if delta_content:
-                                    # yield delta_content
+                          
+                            if "reasoning_content" in delta:
+                                delta_content = delta.get("reasoning_content","")
+                                # delta_content = delta_content.split("</summary>\n>")[-1] if delta_content else ""
+                                if delta_content:
+                                    yield Reasoning(delta_content)
+                            else:
+                                content = delta.get("content", "")
+                                if content:
+                                    yield content
+                            completion_id +=1 

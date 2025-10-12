@@ -5,7 +5,7 @@ from examples.solids.extended.providers.FactoryAI import FactoryAI
 
 async def example_usage():
     """
-    Contoh penggunaan ExtendedGLM dengan StreamSession
+    Contoh penggunaan FactoryAI dengan StreamSession
     """
     # Konfigurasi dasar
     model = "glm-4.6"  # Ganti dengan model yang tersedia

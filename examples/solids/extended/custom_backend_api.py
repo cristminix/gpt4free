@@ -712,10 +712,14 @@ class CustomBackend_Api(CustomApi):
         ignored = request.headers.get("x_ignored", "").split()
         
         # Check if this is a problematic provider that doesn't accept parameters in get_grouped_models
-        if provider in ["OpenAIFM", "PollinationsAI", "PollinationsImage"]:
+        if provider in ["FactoryAI","OpenAIFM", "PollinationsAI", "PollinationsImage"]:
             # Import the provider and temporarily patch if needed
             try:
-                if provider == "OpenAIFM":
+                if provider == "FactoryAI":
+                    with open("examples/provider_models/FactoryAI.json", "r") as f:
+                        json_data = json.load(f)
+                    return json_data
+                elif provider == "OpenAIFM":
                     from g4f.Provider.audio.OpenAIFM import OpenAIFM
                     original_method = OpenAIFM.get_grouped_models
                     

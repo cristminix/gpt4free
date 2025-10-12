@@ -8,13 +8,14 @@ root_dir = PathLib(__file__).parent.parent.parent
 sys.path.insert(0, str(root_dir))
 
 # Import the original Provider module
+# from examples.solids.extended.providers.FactoryAI import FactoryAI
 from g4f.Provider import *
 
 # Import the ProviderUtils class to extend it
 from g4f.Provider import ProviderUtils as BaseProviderUtils
 
 # Import extended providers
-from examples.solids.extended.providers import ExtendedGLM, ExtendedLMArenaBeta, ExtendedPollinationsAI, ExtendedBlackbox
+from examples.solids.extended.providers import FactoryAI, ExtendedGLM, ExtendedLMArenaBeta, ExtendedPollinationsAI, ExtendedBlackbox
 
 # Override original providers with extended versions
 # This ensures that when importing with 'from ProviderExtended import *',
@@ -23,7 +24,8 @@ LMArenaBeta = ExtendedLMArenaBeta
 LMArena = ExtendedLMArenaBeta
 PollinationsAI = ExtendedPollinationsAI
 Blackbox = ExtendedBlackbox
-GLM  = ExtendedGLM,
+GLM  = ExtendedGLM
+# FactoryAI 
 class ProviderUtils(BaseProviderUtils):
     """
     Extended ProviderUtils class that includes custom providers.
@@ -36,7 +38,8 @@ class ProviderUtils(BaseProviderUtils):
         "LMArena": ExtendedLMArenaBeta,
         "PollinationsAI": ExtendedPollinationsAI,
         "Blackbox": ExtendedBlackbox,
-        "GLM"  :ExtendedGLM
+        "GLM"  :ExtendedGLM,
+        "FactoryAI":FactoryAI
     })
 
 # Make sure all providers are available when this module is imported

@@ -1,0 +1,62 @@
+[
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "glm-4.6",
+    "model": "glm-4.6",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-5",
+    "model": "gpt-5-2025-08-07",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "gpt-5-codex",
+    "model": "gpt-5-codex",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-opus-4",
+    "model": "claude-opus-4-1-20250805",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-sonnet-4",
+    "model": "claude-sonnet-4-20250514",
+    "video": false,
+    "vision": false
+  },
+  {
+    "audio": false,
+    "count": null,
+    "default": false,
+    "image": false,
+    "label": "claude-sonnet-4.5",
+    "model": "claude-sonnet-4-5-20250929",
+    "video": false,
+    "vision": false
+  }
+]

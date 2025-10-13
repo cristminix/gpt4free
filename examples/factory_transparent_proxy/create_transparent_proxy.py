@@ -102,7 +102,7 @@ def transform_glm_messages_contents( request_data:dict) -> tuple:
             if message["role"] != "developer"
         ]
         
-        instructions = default_system_prompt_signature + request_data["instructions"]
+        instructions = default_system_prompt_signature 
         system_messages = [m for m in request_data["messages"] if m["role"] == "system"]
         for sys_msg in system_messages:
             instructions += f"{sys_msg['content']}"
@@ -228,7 +228,7 @@ def build_glm_request( request_data:dict,stream=True) -> dict:
         Returns:
             Request body dictionary
         """
-        messages, instructions = transform_gpt_messages_contents(
+        messages, instructions = transform_glm_messages_contents(
             request_data
         )
         

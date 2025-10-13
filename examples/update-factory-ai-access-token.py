@@ -51,7 +51,7 @@ def get_access_token(
         "refresh_token": refresh_token,
         "client_id": client_id,
     }
-    print({"body": body})
+    # print({"body": body})
     
     try:
         response = requests.post(

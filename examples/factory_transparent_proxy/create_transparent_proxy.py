@@ -28,6 +28,7 @@ GLM_ENDPOINT = "o/v1/chat/completions"
 
 # Get API key from environment
 API_KEY = os.getenv("FACTORY_AI_TOKEN")
+SET_PROXY = os.getenv("SET_PROXY")
 if not API_KEY:
     raise ValueError("FACTORY_AI_TOKEN environment variable is required")
 
@@ -276,7 +277,7 @@ async def proxy_request(
     api_provider: str,
     request_data: dict,
     stream: bool = False,
-    proxy: Optional[str] = "http://127.0.0.1:8081"
+    proxy: Optional[str] = SET_PROXY
 ) -> StreamingResponse | JSONResponse:
     """
     Proxy request to Factory AI API.
@@ -292,11 +293,11 @@ async def proxy_request(
         StreamingResponse for streaming requests, JSONResponse otherwise
     """
     url = f"{BASE_URL}/{endpoint}"
-    print(f"url:{url}")
-    print(request_data)
+    # print(f"url:{url}")
+    # print(request_data)
     headers = get_headers(api_provider)
-    print(headers)
-    print(f"proxy:{proxy}")
+    # print(headers)
+    # print(f"proxy:{proxy}")
     #claude-opus-4-1-20250805
     try:
         # Use StreamSession for streaming, StreamResponse for non-streaming

@@ -5,7 +5,12 @@ A FastAPI-based transparent proxy for Factory AI's API endpoints.
 ## Features
 
 - **Three API Endpoints**: Supports GPT, Anthropic, and GLM models
+- **Multiple Endpoint Aliases**: Each provider has alternative endpoint paths for compatibility
 - **Streaming Support**: Handles both streaming and non-streaming responses
+- **Model Mapping**: Automatic model name mapping for Anthropic models
+- **Message Transformation**: Intelligent message content handling (supports both string and list formats)
+- **Proxy Support**: Optional HTTP proxy configuration via `SET_PROXY` environment variable
+- **Browser Impersonation**: Uses Chrome impersonation for requests
 - **Easy to Use**: Simple REST API interface
 - **Environment-based Auth**: Uses `.env` file for API key management
 
@@ -26,6 +31,7 @@ pip install -r requirements.txt
 
 ```bash
 FACTORY_AI_TOKEN="your_token_here"
+SET_PROXY="http://proxy:port"  # Optional
 ```
 
 ## Running the Proxy
@@ -52,11 +58,12 @@ The proxy will be available at `http://localhost:7777`
 
 ### Health Check
 
-- **GET** `/health` - Health check endpoint
+- **GET** `/health` - Health check endpoint (returns status and API key configuration)
 
-### GPT Endpoint
+### GPT Endpoints
 
 - **POST** `/gpt` - Forwards to Factory AI's GPT endpoint
+- **POST** `/responses` - Alias for `/gpt` endpoint
 
 Request body:
 
@@ -69,9 +76,10 @@ Request body:
 }
 ```
 
-### Anthropic Endpoint
+### Anthropic Endpoints
 
 - **POST** `/anthropic` - Forwards to Factory AI's Anthropic endpoint
+- **POST** `/v1/messages` - Alias for `/anthropic` endpoint (OpenAI-compatible path)
 
 Request body:
 
@@ -86,9 +94,16 @@ Request body:
 }
 ```
 
-### GLM Endpoint
+**Supported Model Aliases:**
+
+- `claude-opus-4` → `claude-opus-4-1-20250805`
+- `claude-sonnet-4.5` or `claude-sonnet-4-5` → `claude-sonnet-4-5-20250929`
+- `claude-sonnet-4` → `claude-sonnet-4-20250514`
+
+### GLM Endpoints
 
 - **POST** `/glm` - Forwards to Factory AI's GLM endpoint
+- **POST** `/v1/chat/completions` - Alias for `/glm` endpoint (OpenAI-compatible path)
 
 Request body:
 
@@ -182,6 +197,7 @@ Benefits:
 ## Environment Variables
 
 - `FACTORY_AI_TOKEN`: Your Factory AI API token (required)
+- `SET_PROXY`: HTTP proxy URL (optional, e.g., `http://proxy:port`)
 
 ## Error Handling
 
@@ -189,8 +205,37 @@ The proxy returns appropriate HTTP status codes:
 
 - `200`: Success
 - `400`: Invalid JSON in request body
+- `500`: Internal server error (streaming error, JSON parsing failure)
 - `502`: Request failed (upstream error)
-- `504`: Request timeout
+
+## Technical Details
+
+### Message Content Handling
+
+The proxy intelligently handles message content in multiple formats:
+
+- **String content**: Passed through directly
+- **List content**: Automatically combined into a single string (extracts `text` from content parts)
+
+### Request Transformation
+
+Each API provider has specific request transformations:
+
+- **GPT**: Uses `input` field for messages, adds default system prompt signature
+- **Anthropic**: Filters out system messages from message array, combines them into `system` field
+- **GLM**: Converts to standard chat format with system message prepended
+
+### Provider Headers
+
+The proxy automatically sets the correct `x-api-provider` header:
+
+- GPT: `azure_openai`
+- Anthropic: `anthropic`
+- GLM: `fireworks`
+
+### Browser Impersonation
+
+All requests use Chrome browser impersonation via [`g4f.requests.StreamSession`](../../g4f/requests/__init__.py) for better compatibility.
 
 ## Development
 
@@ -198,6 +243,12 @@ To run in development mode with auto-reload:
 
 ```bash
 uv run uvicorn examples.factory_transparent_proxy.create_transparent_proxy:app --host 0.0.0.0 --port 7777 --reload
+```
+
+Or run directly:
+
+```bash
+python examples/factory_transparent_proxy/create_transparent_proxy.py
 ```
 
 ## License

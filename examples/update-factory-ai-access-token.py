@@ -9,6 +9,7 @@ import requests
 from pathlib import Path
 from typing import Dict, Any, Optional
 from dotenv import load_dotenv
+from urllib.parse import urlencode
 
 
 class TokenResponse:
@@ -50,7 +51,6 @@ def get_access_token(
         "refresh_token": refresh_token,
         "client_id": client_id,
     }
-    
     print({"body": body})
     
     try:
@@ -58,9 +58,9 @@ def get_access_token(
             url,
             headers={
                 "Content-Type": "application/x-www-form-urlencoded",
-                "User-Agent": "Python/3.x",
+                "User-Agent": "Bun/1.2.23",
             },
-            data=body,
+            data=urlencode(body),
             timeout=30
         )
         

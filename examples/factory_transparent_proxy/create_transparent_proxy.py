@@ -76,7 +76,11 @@ def transform_gpt_messages_contents( request_data:dict) -> tuple:
         #     if message["role"] != "developer"
         # ]
         
-        instructions = default_system_prompt_signature + request_data["instructions"]
+        if "instructions" in request_data:
+            instructions = default_system_prompt_signature + request_data["instructions"]
+        else:
+            instructions = default_system_prompt_signature  
+
         # system_messages = [m for m in messages if m["role"] == "system"]
         # for sys_msg in system_messages:
         #     instructions += f"{sys_msg['content']}"
@@ -142,7 +146,8 @@ def transform_antrophic_messages_contents(request_data:dict) -> tuple:
                 # print("====================================")
                 # pass
         else:
-            instructions += request_data["system"]
+            if "system" in request_data:
+                instructions += request_data["system"]
         
         return input_msgs, instructions
 
@@ -195,6 +200,7 @@ def build_antrophic_request( request_data:dict,stream=True) -> dict:
         "claude-sonnet-4-5": "claude-sonnet-4-5-20250929",
         "claude-sonnet-4": "claude-sonnet-4-20250514",
     }
+    input_model=request_data["model"]
     valid_models=[ "claude-opus-4-1-20250805",  "claude-sonnet-4-5-20250929",  "claude-sonnet-4-5-20250929"]
     real_model = "claude-opus-4-1-20250805"
     if "model" in request_data:
@@ -212,7 +218,7 @@ def build_antrophic_request( request_data:dict,stream=True) -> dict:
         "max_tokens": request_data.get("max_tokens", 32000),
         "temperature": request_data.get("temperature", 1),
     }
-    
+    print(f"using:{real_model} instead of {input_model}")
     if len(instructions) > 0:
         body["system"] = instructions
     
@@ -298,6 +304,7 @@ async def proxy_request(
     headers = get_headers(api_provider)
     # print(headers)
     # print(f"proxy:{proxy}")
+    print(f"stream:{stream}")
     #claude-opus-4-1-20250805
     try:
         # Use StreamSession for streaming, StreamResponse for non-streaming

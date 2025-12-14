@@ -1,8 +1,8 @@
-from g4f.Provider import Blackbox
+from g4f.Provider import BlackboxPro
 from g4f.typing import Messages, AsyncResult
 from typing import Optional
 
-class ExtendedBlackbox(Blackbox):
+class ExtendedBlackbox(BlackboxPro):
     """Extended Blackbox provider with additional functionality"""
     
     # Inherit class attributes from the parent class
